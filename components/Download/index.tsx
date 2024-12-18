@@ -1,7 +1,7 @@
 import React from 'react'
-import Container from './container'
-import { Button } from './button'
-import LeadingTitle from './leading-title'
+import Container from '../container'
+import { Button } from '../Button'
+import LeadingTitle from '../leading-title'
 import { backgroundColor } from '@/lib/utils'
 
 export default function DownloadSection() {

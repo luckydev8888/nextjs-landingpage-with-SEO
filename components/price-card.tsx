@@ -41,7 +41,7 @@ export default function PriceCard(
             <div className='mt-8'>
                 <ul className='space-y-5 '>
                     {features?.map((feature, index) => (
-                        <li className='flex items-center space-x-2'>
+                        <li key={index} className='flex items-center space-x-2'>
                             <img src={feature.isIncluded ? '/checkmark.svg' : '/cross.svg'} alt='icon' className='w-5 h-5' />
                             <p>{feature.description}</p>
                         </li>

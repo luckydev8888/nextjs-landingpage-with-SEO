@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import React from 'react'
-import Container from './container'
-import { Button } from "./button"
+import Container from '../container'
+import { Button } from "../Button"
 import { fadeInAnimationByIndex, moveInAnimationByIndex } from '@/lib/animations'
 
 export default function HeroSection() {
