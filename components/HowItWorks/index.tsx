@@ -1,9 +1,9 @@
 "use client"
 
 import React, { useState } from 'react'
-import Container from './container'
-import ContentWrapper from './content-wrapper'
-import LeadingTitle from './leading-title'
+import Container from '../container'
+import ContentWrapper from '../content-wrapper'
+import LeadingTitle from '../leading-title'
 
 export default function HowItWorks() {
 

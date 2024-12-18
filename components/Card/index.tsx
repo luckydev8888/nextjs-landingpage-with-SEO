@@ -1,6 +1,6 @@
 import React from 'react'
-import Container from './container'
-import LeadingTitle from './leading-title'
+import Container from '../container'
+import LeadingTitle from '../leading-title'
 import { motion } from 'framer-motion'
 
 const cards = [

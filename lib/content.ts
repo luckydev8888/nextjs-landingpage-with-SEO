@@ -1,7 +1,5 @@
 interface Testimonial {
     avatar: string
-    name: string
-    position: string
     content: string
     title: string
 }
@@ -9,28 +7,38 @@ interface Testimonial {
 
 export const testimonialData: Testimonial[] = [
     {
-        avatar: "/avatar-1.png",
-        name: "John Doe",
-        position: "CEO at Company",
+        avatar: "/rocket.png",
         content:
-            "It’s just 1 month since I’m using Spend.In to manage my business expenses, but the result is very satisfying! My business finance now more neat than before, thanks to Spend.In!",
-        title: "It’s just incredible!",
+            "Direct Instagram users straight to your page on their native browser, like Safari.",
+        title: "Deeplink Technology",
     },
     {
-        avatar: "/avatar-2.png",
-        name: "Natasha Romanoff",
-        position: "Black Widow",
+        avatar: "/keyboard.png",
         content:
-            "Never thought that with Spend.In managing my business expenses is so easy! Been using this platform for 3 months and still counting!",
-        title: "Satisfied User Here!",
+            "Create a beautiful landing page with all your custom links and socials.",
+        title: "Landing Page",
     },
     {
-        avatar: "/avatar-3.png",
-        name: "Moritika Kazuki",
-        position: "Finance Manager at Mangan",
+        avatar: "/paper.png",
         content:
-            "“The best”! That’s what I want to say to this platform, didn’t know that there’s a platform to help you manage your business expenses like this! Very recommended to you who have a big business!",
-        title: "No doubt, Spend.In is the best!",
+            "Redirect users directly to any website without an intermediary page.",
+        title: "Direct Link",
+    },
+    {
+        avatar: "/laptop.png",
+        content:
+            "Activate Shield Protection to protect your Instagram account against mods & bots.",
+        title: "Shield Protection",
+    },{
+        avatar: "/user.png",
+        content:
+            "Redirect users directly to any website without an intermediary page.",
+        title: "Geo Filter",
+    },{
+        avatar: "/check.png",
+        content:
+            "Track activity & engagement in real-time (clicks, devices, demographics, IPs).",
+        title: "Analytics",
     },
 ]
 

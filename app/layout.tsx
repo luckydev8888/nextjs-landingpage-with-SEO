@@ -1,6 +1,6 @@
 import "@/styles/globals.css"
 import { cn } from "@/lib/utils"
-import { MainNav } from "@/components/main-nav"
+import MainNav from "@/components/Layout/Navbar"
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import type { Metadata } from 'next'
 
