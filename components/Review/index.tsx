@@ -27,29 +27,27 @@ const cards = [
 
 const ReviewSection = () => {
   return (
-    <div id="benefit" className="flex items-center w-full">
+    <div id="reviews" className="flex items-center w-full">
       <Container>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           className="w-full flex flex-col items-start gap-4  "
         >
-          <div className="flex flex-row  flex-wrap items-center sm:items-end w-full justify-start">
-            <div className="flex flex-col items-start gap-4">
-              <LeadingTitle label="WHY USE SPEND.IN" />
-              <h3 className="text-4xl sm:mt-3 leading-[48px] font-bold text-left max-w-[300px] text-text-dark">
-                Easy, Simple, Affordable
-              </h3>
-            </div>
-            <p className="text-gray-600 text-xl leading-8 mt-3 max-w-[500px] sm:max-w-[600px] ">
-              Our platform helps your business in managing expenses. These are
-              some of the reasons why you should use our platform in managing
-              business finances.
-            </p>
-          </div>
           <div className=" flex lg:flex-row flex-col gap-6 items-start justify-between w-full mt-8 sm:mt-16">
+            <div className="flex flex-col items-center justify-center w-full h-screen text-center">
+              <h4 className="text-[15px] text-gray-600">
+                Real Customers Reviews
+              </h4>
+              <h3 className="text-4xl sm:mt-3 leading-[48px] text-[26px] font-bold max-w-[300px] text-gray-600">
+                What people say
+              </h3>
+              <p className="text-gray-600 text-xl text-[15px] leading-8 mt-3 max-w-[500px] sm:max-w-[600px]">
+                See what our customers have to say about their experience.
+              </p>
+            </div>
             {cards.map((_, index) => (
-              <div key={index} className="w-full mb-4 rounded-lg">
+              <div key={index} className="w-full mb-3 rounded-lg">
                 <div className="w-full bg-gray-100 h-[384px] rounded-lg relative overflow-hidden">
                   <div className="ml-[-40px] mt-10 h-full object-cover w-full ">
                     <img

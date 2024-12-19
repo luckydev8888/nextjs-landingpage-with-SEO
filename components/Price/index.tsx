@@ -113,8 +113,11 @@ const PriceSection = () => {
                   description={priceCard.description}
                   priceMonthly={priceCard.priceMonthly}
                   priceYearly={priceCard.priceYearly}
-                  features={priceCard.features}
-                  //   imgs={priceCardImgs[index]}
+                  features={priceCard.features.map((feature) => ({
+                    ...feature,
+                    isInformationCircleIncluded:
+                      feature.isInformationCircleIncluded ?? false, // Default to false if undefined
+                  }))}
                   isYearly={isToggled}
                 />
               ))}

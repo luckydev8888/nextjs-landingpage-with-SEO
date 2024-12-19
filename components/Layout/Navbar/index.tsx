@@ -23,7 +23,7 @@ const DropdownItem = ({ item }: any) => {
       <Link
         href={item.href}
         onClick={handleItemClick}
-        className="flex w-full items-center p-2 hover:bg-gray-700 rounded-md"
+        className="flex w-full items-center p-2 hover:text-[#7367f0] active:text-[#7367f0] rounded-md"
       >
         {item.label}
       </Link>
@@ -33,7 +33,7 @@ const DropdownItem = ({ item }: any) => {
 
 const navItems = [
   { href: "#features", label: "Features" },
-  { href: "#benefit", label: "Reviews" },
+  { href: "#reviews", label: "Reviews" },
   { href: "#pricing", label: "Pricing" },
   { href: "#download", label: "FAQ" },
 ]
@@ -76,7 +76,7 @@ const MainNav = () => {
               <Link
                 href={item.href}
                 key={index}
-                className="flex w-full items-center whitespace-nowrap p-2 hover:bg-gray-700 rounded-md text-description"
+                className="flex w-full items-center whitespace-nowrap p-2 hover:text-[#7367f0] active:text-[#7367f0] rounded-md text-description"
               >
                 {item.label}
               </Link>
@@ -87,7 +87,7 @@ const MainNav = () => {
               variant="secondary"
               size="nav"
               label="Login/Register"
-              style={{ backgroundColor: "#7367f0", color: "#fff" }}
+              className="bg-[#7367f0] text-white"
             />
           </div>
           {isMenuOpen && (
@@ -97,7 +97,7 @@ const MainNav = () => {
                   <Link
                     href={item.href}
                     key={index}
-                    className="flex w-full items-center p-2 hover:bg-gray-700 rounded-md"
+                    className="flex w-full items-center p-2 hover:text-[#7367f0] active:text-[#7367f0] rounded-md"
                   >
                     {item.label}
                   </Link>
