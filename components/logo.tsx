@@ -34,7 +34,7 @@ export default function Logo() {
       </svg>
 
       <span className="inline-block text-xl font-bold text-black text-[32px]">
-        CHO GWANG SUNG
+        DEMO
       </span>
     </Link>
   )
