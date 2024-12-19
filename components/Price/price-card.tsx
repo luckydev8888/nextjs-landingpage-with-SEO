@@ -29,7 +29,6 @@ export default function PriceCard({
   priceYearly,
   isYearly,
   features,
-  //   imgs,
   onClick,
 }: PriceCardProps) {
   //   useEffect(() => {
