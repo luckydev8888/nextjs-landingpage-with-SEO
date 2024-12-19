@@ -12,7 +12,6 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
-
     },
     extend: {
       colors: {
@@ -26,6 +25,7 @@ module.exports = {
         "text-secondary-light": "#596780",
         "text-dark": "#040815",
         "transparent-white": "rgba(255, 255, 255, 0.08)",
+        description: "#5d596c",
       },
 
       animation: {
@@ -34,6 +34,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"),
-  ],
+  plugins: [require("tailwindcss-animate")],
 }
