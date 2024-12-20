@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import SwiperCore from "swiper"
 import { Autoplay } from "swiper/modules"
@@ -10,6 +10,25 @@ import { reviewCardData, reviewPanelDatas } from "@/config/constants"
 
 const ReviewSection = () => {
   const swiperRef = useRef<SwiperCore | null>(null)
+  const [maxHeight, setMaxHeight] = useState(0)
+
+  useEffect(() => {
+    // Calculate the tallest slide
+    const calculateMaxHeight = () => {
+      const slides = document.querySelectorAll(".review-slide")
+      let max = 0
+      slides.forEach((slide) => {
+        max = Math.max(max, slide.scrollHeight)
+      })
+      setMaxHeight(max)
+    }
+
+    calculateMaxHeight()
+    window.addEventListener("resize", calculateMaxHeight)
+    return () => {
+      window.removeEventListener("resize", calculateMaxHeight)
+    }
+  }, [])
 
   return (
     <div id="reviews" className="w-full">
@@ -50,29 +69,35 @@ const ReviewSection = () => {
                 {reviewCardData.map((slide, index) => (
                   <SwiperSlide
                     key={index}
-                    className="flex items-stretch" // Ensure all slides stretch to fill height
+                    className="review-slide flex items-stretch"
                   >
-                    <div className="w-full flex flex-col items-center justify-between bg-white p-6 rounded-lg shadow-md text-center min-h-[250px]">
+                    <div
+                      className="w-full flex flex-col items-center justify-between bg-white p-6 rounded-lg shadow-md text-center"
+                      style={{ height: `${maxHeight}px` }}
+                    >
                       {/* Quote */}
                       <p className="text-gray-700 italic text-base mb-4 flex-grow">
                         {slide.description}
                       </p>
 
                       {/* User Info */}
-                      <div className="flex items-center space-x-3 mt-auto">
+                      <div className="flex flex-col items-center mt-auto">
+                        {/* Image */}
                         <img
                           src={slide.image}
                           alt={slide.Name}
-                          className="w-10 h-10 rounded-full"
+                          className="w-16 h-16 rounded-full mb-2"
                         />
-                        <div>
-                          <p className="text-gray-900 font-bold">
-                            {slide.Name}
-                          </p>
-                          <p className="text-gray-500 text-sm">
-                            {slide.Position}
-                          </p>
-                        </div>
+
+                        {/* Name */}
+                        <p className="text-gray-900 font-bold text-lg">
+                          {slide.Name}
+                        </p>
+
+                        {/* Position */}
+                        <p className="text-gray-500 text-sm">
+                          {slide.Position}
+                        </p>
                       </div>
                     </div>
                   </SwiperSlide>

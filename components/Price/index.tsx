@@ -68,10 +68,10 @@ const PriceSection = () => {
         <div className="w-full flex flex-col items-center gap-4 text-white">
           <div className="flex flex-col items-center gap-20 w-full justify-start">
             <div className="flex flex-col items-center gap-4 w-full">
-              <h3 className="text-4xl mt-2 leading-[48px] font-bold text-center max-w-[700px] text-description">
+              <h3 className="text-2xl mt-2 leading-[48px] font-bold text-center max-w-[700px] text-description">
                 Tailored pricing plans designed for you
               </h3>
-              <p className="text-4xl mt-2 text-center max-w-[1000px] text-description leading-[1.5]">
+              <p className="text-xl mt-2 text-center max-w-[1000px] text-description leading-[1.5]">
                 All plans include advanced tools and features to boost your
                 conversion rate. Choose the best plan to fit your needs.
               </p>
@@ -104,22 +104,30 @@ const PriceSection = () => {
                 Save 20%
               </div>
             </div>
-            <div className="flex sm:flex-row sm:justify-center flex-col flex-wrap gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {priceCardData.map((priceCard, index: number) => (
-                <PriceCard
+                <div
                   key={index}
-                  logo={priceCard.logo}
-                  title={priceCard.title}
-                  description={priceCard.description}
-                  priceMonthly={priceCard.priceMonthly}
-                  priceYearly={priceCard.priceYearly}
-                  features={priceCard.features.map((feature) => ({
-                    ...feature,
-                    isInformationCircleIncluded:
-                      feature.isInformationCircleIncluded ?? false, // Default to false if undefined
-                  }))}
-                  isYearly={isToggled}
-                />
+                  className={`${
+                    index === 2
+                      ? "sm:col-span-2 lg:col-span-1" // Third card spans two columns on small screens
+                      : ""
+                  } flex flex-col items-center justify-center w-full p-6 bg-white rounded-lg`}
+                >
+                  <PriceCard
+                    logo={priceCard.logo}
+                    title={priceCard.title}
+                    description={priceCard.description}
+                    priceMonthly={priceCard.priceMonthly}
+                    priceYearly={priceCard.priceYearly}
+                    features={priceCard.features.map((feature) => ({
+                      ...feature,
+                      isInformationCircleIncluded:
+                        feature.isInformationCircleIncluded ?? false, // Default to false if undefined
+                    }))}
+                    isYearly={isToggled}
+                  />
+                </div>
               ))}
             </div>
           </div>
