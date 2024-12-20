@@ -8,49 +8,54 @@ import "swiper/css"
 import "swiper/css/autoplay"
 import { reviewCardData, reviewPanelDatas } from "@/config/constants"
 
-import Container from "../Container"
-
 const ReviewSection = () => {
   const swiperRef = useRef<SwiperCore | null>(null)
+
   return (
-    <div id="reviews" className="flex-row items-center w-full">
-      <div className="flex items-center w-full rounded-tl-[60px] rounded-tr-[60px] bg-[linear-gradient(138.18deg,#eae8fd,#fce5e6_94.44%)] py-16">
+    <div id="reviews" className="w-full">
+      {/* Reviews Section */}
+      <div className="flex items-center w-full bg-[linear-gradient(138.18deg,#eae8fd,#fce5e6_94.44%)] py-16 px-4">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="w-full flex flex-col items-center gap-4"
+          className="w-full flex flex-col items-center gap-6"
         >
-          <div className="flex lg:flex-row flex-col gap-6 items-stretch justify-between w-full mt-8 sm:mt-16">
+          <div className="flex flex-col lg:flex-row gap-12 items-stretch justify-between w-full mt-8 sm:mt-16">
             {/* Content Section */}
-            <div className="flex flex-col items-center justify-center w-full text-center lg:w-1/4">
-              <h4 className="text-[15px] text-gray-600">
-                Real Customers Reviews
-              </h4>
-              <h3 className="text-4xl sm:mt-3 leading-[48px] font-bold max-w-[300px] text-gray-600">
+            <div className="flex flex-col items-center justify-center w-full lg:w-1/3 text-center">
+              <h4 className="text-sm text-gray-600">Real Customers Reviews</h4>
+              <h3 className="text-3xl sm:text-4xl mt-3 leading-[48px] font-bold max-w-[300px] text-gray-600">
                 What people say
               </h3>
-              <p className="text-gray-600 text-xl leading-8 mt-3 max-w-[500px] sm:max-w-[600px]">
+              <p className="text-gray-600 text-base sm:text-xl leading-8 mt-3 max-w-[500px]">
                 See what our customers have to say about their experience.
               </p>
             </div>
 
             {/* Cards Section */}
-            <div className="lg:w-2/3 w-full">
+            <div className="w-full lg:w-2/3">
               <Swiper
                 modules={[Autoplay]}
                 autoplay={{ delay: 2000 }}
                 loop
-                slidesPerView={3} // Show three reviews at once
-                slidesPerGroup={1} // Slide one review at a time
-                spaceBetween={30} // Add space between slides
-                className="w-full max-w-5xl"
+                slidesPerView={1}
+                breakpoints={{
+                  640: { slidesPerView: 1, spaceBetween: 20 },
+                  768: { slidesPerView: 2, spaceBetween: 20 },
+                  1024: { slidesPerView: 3, spaceBetween: 30 },
+                }}
+                slidesPerGroup={1}
+                className="w-full"
               >
                 {reviewCardData.map((slide, index) => (
-                  <SwiperSlide key={index} className="h-auto flex">
-                    <div className="w-full flex flex-col items-center justify-between bg-white p-6 rounded-lg shadow-md text-center h-auto">
+                  <SwiperSlide
+                    key={index}
+                    className="flex items-stretch" // Ensure all slides stretch to fill height
+                  >
+                    <div className="w-full flex flex-col items-center justify-between bg-white p-6 rounded-lg shadow-md text-center min-h-[250px]">
                       {/* Quote */}
-                      <p className="text-gray-700 italic mb-4 flex-grow">
-                        “{slide.description}”
+                      <p className="text-gray-700 italic text-xl mb-4 flex-grow">
+                        {slide.description}
                       </p>
 
                       {/* User Info */}
@@ -60,7 +65,7 @@ const ReviewSection = () => {
                           alt={slide.Name}
                           className="w-10 h-10 rounded-full"
                         />
-                        <div className="flex-0">
+                        <div>
                           <p className="text-gray-900 font-bold">
                             {slide.Name}
                           </p>
@@ -78,17 +83,21 @@ const ReviewSection = () => {
         </motion.div>
       </div>
 
-      <div className="bg-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      {/* Panel Data Section */}
+      <div className="bg-white py-20 px-6">
+        <div className="container mx-auto">
+          <h3 className="text-center text-2xl sm:text-3xl font-bold mb-10 text-gray-600">
+            Why Choose Us?
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {reviewPanelDatas.map((reviewPanelData, index) => (
               <div
                 key={index}
-                className={`flex flex-col  items-center justify-center border-2 rounded-lg p-6 ${reviewPanelData.borderColor}`}
+                className={`flex flex-col items-center justify-center border-2 rounded-lg p-8 ${reviewPanelData.borderColor}`}
               >
                 {/* Icon */}
                 <div
-                  className={`text-6xl mb-4 ${reviewPanelData.iconColor}`} // Set icon size and color dynamically
+                  className={`text-6xl mb-6 ${reviewPanelData.iconColor}`} // Icon size and color
                 >
                   {reviewPanelData.icon}
                 </div>
