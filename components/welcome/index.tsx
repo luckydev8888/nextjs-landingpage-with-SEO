@@ -63,7 +63,7 @@ const Welcome = () => {
       onMouseLeave={handleMouseLeave}
     >
       {/* Title Section */}
-      <h2 className="text-4xl font-bold text-purple-600 mb-4">
+      <h2 className="text-5xl font-bold text-purple-600 mb-4">
         Get More Fans, <br /> Protect Your Instagram
       </h2>
       <p className="text-gray-600 text-xl max-w-2xl">
