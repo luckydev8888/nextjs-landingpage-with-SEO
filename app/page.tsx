@@ -1,6 +1,6 @@
 "use client"
 
-import DownloadSection from "@/components/Download"
+import FaqSection from "@/components/Faq"
 import FeatureSection from "@/components/Feature"
 import HeroSection from "@/components/Hero"
 import HowItWorks from "@/components/HowItWorks"
@@ -14,7 +14,7 @@ export default function IndexPage() {
       <FeatureSection />
       <ReviewSection />
       <PriceSection />
-      <DownloadSection />
+      <FaqSection />
       <Footer />
     </section>
   )

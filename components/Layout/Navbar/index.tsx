@@ -35,7 +35,7 @@ const navItems = [
   { href: "#features", label: "Features" },
   { href: "#reviews", label: "Reviews" },
   { href: "#pricing", label: "Pricing" },
-  { href: "#download", label: "FAQ" },
+  { href: "#faq", label: "FAQ" },
 ]
 
 const MainNav = () => {

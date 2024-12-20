@@ -1,9 +1,15 @@
 import { BsBadgeTm } from "react-icons/bs"
+import { GrDiamond } from "react-icons/gr"
 import { HiOutlinePaintBrush } from "react-icons/hi2"
 import { IoIosInformationCircleOutline } from "react-icons/io"
 import { IoCheckmarkCircleOutline, IoRocketOutline } from "react-icons/io5"
-import { LuSend } from "react-icons/lu"
-import { PiBrowserDuotone, PiLinkSimpleLight } from "react-icons/pi"
+import { LuCircleUserRound, LuSend } from "react-icons/lu"
+import {
+  PiBrowserDuotone,
+  PiLaptop,
+  PiLinkSimpleLight,
+  PiSealCheckDuotone,
+} from "react-icons/pi"
 import {
   TbBrandGoogleAnalytics,
   TbBrandTelegram,
@@ -162,6 +168,59 @@ export const reviewCardData = [
     description:
       "“Been using it for a month now on 3 different accounts, conversion is def better, i would say about 30% increase.”",
     image: "/client2.jpg",
+  },
+]
+
+export const reviewPanelDatas = [
+  {
+    icon: <PiLaptop />, // Replace with an actual icon/image if necessary
+    value: "+50%",
+    description: "Conversion Rate Increase",
+    borderColor: "border-indigo-500", // Adjust colors as needed
+    iconColor: "text-indigo-500", // Adjust colors as needed
+  },
+  {
+    icon: <LuCircleUserRound />, // Replace with an actual icon/image
+    value: "25k+",
+    description: "Active Instagram Links",
+    borderColor: "border-green-500",
+    iconColor: "text-green-500",
+  },
+  {
+    icon: <GrDiamond />, // Replace with an actual icon/image
+    value: "4.8/5",
+    description: "Highly Trusted Product",
+    borderColor: "border-cyan-500",
+    iconColor: "text-cyan-500",
+  },
+  {
+    icon: <PiSealCheckDuotone />, // Replace with an actual icon/image
+    value: "$0",
+    description: "14-Day Free Trial",
+    borderColor: "border-orange-500",
+    iconColor: "text-orange-500",
+  },
+]
+
+export const faqData = [
+  {
+    question: "What is your refund policy?",
+    answer:
+      "We offer a full refund within the first 14 days of purchase if you're not satisfied with the product.",
+  },
+  {
+    question: "How do I contact support?",
+    answer:
+      "You can contact support via email at support@example.com or through the contact form on our website.",
+  },
+  {
+    question: "Can I upgrade my plan later?",
+    answer: "Yes, you can upgrade your plan at any time from your dashboard.",
+  },
+  {
+    question: "Is there a free trial available?",
+    answer:
+      "Yes, we offer a 14-day free trial. You can try all the features before making a purchase.",
   },
 ]
 
