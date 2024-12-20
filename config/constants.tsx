@@ -159,7 +159,7 @@ export const reviewCardData = [
     Name: "Golden",
     Position: "Creator",
     description:
-      "“Finally an All In One tool! I have been using it for over a month, and no more Ads or accounts have been suspended! Finger crossed.”",
+      "“Finally an All In One tool! I have been using it for over a month, and no more Ads or accounts have been suspended!”",
     image: "/client3.jpg",
   },
   {

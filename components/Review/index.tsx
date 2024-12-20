@@ -14,11 +14,11 @@ const ReviewSection = () => {
   return (
     <div id="reviews" className="w-full">
       {/* Reviews Section */}
-      <div className="flex items-center w-full bg-[linear-gradient(138.18deg,#eae8fd,#fce5e6_94.44%)] py-16 px-4">
+      <div className="flex justify-center bg-[linear-gradient(138.18deg,#eae8fd,#fce5e6_94.44%)] py-16 px-4">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="w-full flex flex-col items-center gap-6"
+          className="w-full max-w-7xl flex flex-col items-center gap-6"
         >
           <div className="flex flex-col lg:flex-row gap-12 items-stretch justify-between w-full mt-8 sm:mt-16">
             {/* Content Section */}
@@ -54,7 +54,7 @@ const ReviewSection = () => {
                   >
                     <div className="w-full flex flex-col items-center justify-between bg-white p-6 rounded-lg shadow-md text-center min-h-[250px]">
                       {/* Quote */}
-                      <p className="text-gray-700 italic text-xl mb-4 flex-grow">
+                      <p className="text-gray-700 italic text-base mb-4 flex-grow">
                         {slide.description}
                       </p>
 
@@ -86,9 +86,6 @@ const ReviewSection = () => {
       {/* Panel Data Section */}
       <div className="bg-white py-20 px-6">
         <div className="container mx-auto">
-          <h3 className="text-center text-2xl sm:text-3xl font-bold mb-10 text-gray-600">
-            Why Choose Us?
-          </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {reviewPanelDatas.map((reviewPanelData, index) => (
               <div

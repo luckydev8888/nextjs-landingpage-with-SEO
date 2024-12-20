@@ -1,35 +1,10 @@
 "use client"
 
-import * as React from "react"
-import { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Link from "next/link"
-import { AnimatePresence, motion } from "framer-motion"
 
 import { Button } from "../../Button"
 import Logo from "../Logo"
-
-const DropdownItem = ({ item }: any) => {
-  const [isHovering, setIsHovering] = useState(false)
-
-  const handleItemClick = (event: { preventDefault: () => void }) => {
-    if (item.items && item.items.length) {
-      event.preventDefault() // Prevent link navigation
-      setIsHovering(!isHovering) // Toggle visibility of submenu
-    }
-  }
-
-  return (
-    <div className="relative">
-      <Link
-        href={item.href}
-        onClick={handleItemClick}
-        className="flex w-full items-center p-2 hover:text-[#7367f0] active:text-[#7367f0] rounded-md"
-      >
-        {item.label}
-      </Link>
-    </div>
-  )
-}
 
 const navItems = [
   { href: "#features", label: "Features" },
@@ -39,21 +14,45 @@ const navItems = [
 ]
 
 const MainNav = () => {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  // Detect scroll and toggle the background color
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   const closeMenu = () => {
     setIsMenuOpen(false)
   }
 
   return (
-    <div className="sticky top-0 z-40 ">
+    <div className="sticky top-0 z-40">
       <header
         onClick={closeMenu}
-        className="sticky top-0 z-40 w-[70%] mx-auto border-2 border-[hsla(0,0%,100%,.68)] py-[0.75rem] mt-[1rem] mb-[1rem] text-white transaction-all ease-in rounded-[0.5rem] bg-[linear-gradient(138.18deg,#eae8fd,#fce5e6_94.44%)] shadow-2xl"
+        className={`sticky top-0 z-40 w-[90%] mx-auto border-2 ${
+          isScrolled
+            ? "bg-white text-black shadow-md"
+            : "bg-[linear-gradient(138.18deg,#eae8fd,#fce5e6_94.44%)] text-white"
+        } py-[0.75rem] mt-[1rem] mb-[1rem] transition-all ease-in-out rounded-[0.5rem]`}
       >
         <div className="container flex h-16 items-center justify-between p-3 mx-auto">
-          <Logo textColor="black" />
+          <Logo textColor={isScrolled ? "black" : "white"} />
           <button
-            className="lg:hidden text-white focus:outline-none"
+            className={`lg:hidden focus:outline-none ${
+              isScrolled ? "text-black" : "text-white"
+            }`}
             onClick={(e) => {
               e.stopPropagation()
               setIsMenuOpen(!isMenuOpen)
@@ -76,7 +75,9 @@ const MainNav = () => {
               <Link
                 href={item.href}
                 key={index}
-                className="flex w-full items-center whitespace-nowrap p-2 hover:text-[#7367f0] active:text-[#7367f0] rounded-md text-description"
+                className={`flex w-full items-center text-xl whitespace-nowrap p-2 ${
+                  isScrolled ? "text-black" : "text-[#5D596C]"
+                } hover:text-[#7367f0] active:text-[#7367f0] rounded-md`}
               >
                 {item.label}
               </Link>
@@ -87,12 +88,16 @@ const MainNav = () => {
               variant="secondary"
               size="nav"
               label="Login/Register"
-              className="bg-[#7367f0] text-white"
+              className={`${
+                isScrolled
+                  ? "bg-[#7367f0] text-white"
+                  : "text-white bg-[#7367f0]"
+              }`}
             />
           </div>
           {isMenuOpen && (
-            <nav className="transaction-all ease-in absolute top-full bg-background-opacity backdrop-blur-lg w-full h-screen shadow-md left-0 right-0 lg:hidden">
-              <div className=" w-full  flex-col items-start px-5 py-3 flex bg-background ">
+            <nav className="absolute top-full bg-white w-full h-screen shadow-md left-0 right-0 lg:hidden transition-all ease-in-out">
+              <div className="w-full flex flex-col items-start px-5 py-3 bg-white">
                 {navItems?.map((item, index) => (
                   <Link
                     href={item.href}
