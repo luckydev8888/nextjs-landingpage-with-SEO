@@ -26,10 +26,10 @@ const ReviewSection = () => {
               <h4 className="text-[15px] text-gray-600">
                 Real Customers Reviews
               </h4>
-              <h3 className="text-4xl sm:mt-3 leading-[48px] text-[26px] font-bold max-w-[300px] text-gray-600">
+              <h3 className="text-4xl sm:mt-3 leading-[48px] font-bold max-w-[300px] text-gray-600">
                 What people say
               </h3>
-              <p className="text-gray-600 text-xl text-[15px] leading-8 mt-3 max-w-[500px] sm:max-w-[600px]">
+              <p className="text-gray-600 text-xl leading-8 mt-3 max-w-[500px] sm:max-w-[600px]">
                 See what our customers have to say about their experience.
               </p>
             </div>

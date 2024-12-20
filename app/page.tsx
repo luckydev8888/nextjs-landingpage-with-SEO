@@ -2,7 +2,6 @@
 
 import FaqSection from "@/components/Faq"
 import FeatureSection from "@/components/Feature"
-import HeroSection from "@/components/Hero"
 import Footer from "@/components/Layout/Footer"
 import PriceSection from "@/components/Price"
 import ReviewSection from "@/components/Review"

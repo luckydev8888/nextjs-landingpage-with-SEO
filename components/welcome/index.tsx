@@ -68,7 +68,7 @@ const Welcome = () => {
       </h2>
       <p className="text-gray-600 text-xl max-w-2xl">
         Create stunning landing pages, link directly to any site, and bypass
-        Instagram's limits to boost your conversions.
+        Instagram&apos;s limits to boost your conversions.
       </p>
       <button className="flex flex-row gap-3 mt-6 px-8 py-3 bg-[#7367F0] text-white rounded-lg hover:bg-purple-500">
         <TbMovie className="text-2xl" />
