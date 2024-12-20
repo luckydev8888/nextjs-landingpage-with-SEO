@@ -2,6 +2,8 @@ import React, { useEffect } from "react"
 import Image from "next/image"
 import { IoIosInformationCircleOutline } from "react-icons/io"
 
+import { priceCardData } from "@/config/constants"
+
 interface featureProps {
   img: any
   description: string
@@ -21,7 +23,7 @@ interface PriceCardProps {
   onClick?: () => void
 }
 
-export default function PriceCard({
+const PriceCard = ({
   logo,
   title,
   description,
@@ -30,7 +32,7 @@ export default function PriceCard({
   isYearly,
   features,
   onClick,
-}: PriceCardProps) {
+}: PriceCardProps) => {
   //   useEffect(() => {
   //     window.alert(imgs)
   //   }, [])
@@ -85,3 +87,5 @@ export default function PriceCard({
     </div>
   )
 }
+
+export default PriceCard
