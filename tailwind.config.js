@@ -28,6 +28,15 @@ module.exports = {
         description: "#5d596c",
       },
 
+      perspective: {
+        1200: "1200px",
+      },
+
+      transform: {
+        "rotate-x": "-47.9deg",
+        "rotate-y": "6.24deg",
+      },
+
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",

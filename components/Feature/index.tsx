@@ -11,7 +11,7 @@ import FeatureCard from "./feature-card"
 const FeatureSection = () => {
   return (
     <div
-      id="testimonial"
+      id="features"
       className="flex items-center w-full relative overflow-hidden"
     >
       <Container bgColor="#0D121F">

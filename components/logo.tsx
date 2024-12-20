@@ -1,7 +1,11 @@
 import React from "react"
 import Link from "next/link"
 
-export default function Logo() {
+interface LogoProps {
+  textColor: string // Define the type of the `textColor` prop
+}
+
+export default function Logo({ textColor }: LogoProps) {
   return (
     <Link href="/" className="flex items-center space-x-2">
       <svg
@@ -33,7 +37,9 @@ export default function Logo() {
         </defs>
       </svg>
 
-      <span className="inline-block text-xl font-bold text-black">DEMO</span>
+      <span className={`inline-block text-xl font-bold text-${textColor}`}>
+        DEMO
+      </span>
     </Link>
   )
 }
