@@ -4,8 +4,8 @@ import { motion } from "framer-motion"
 import { fadeInAnimationByIndex } from "@/lib/animations"
 import { featureData } from "@/lib/content"
 
-import Container from "../container"
-import LeadingTitle from "../leading-title"
+import Container from "../Container"
+import LeadingTitle from "../Leading-title"
 import FeatureCard from "./feature-card"
 
 const FeatureSection = () => {

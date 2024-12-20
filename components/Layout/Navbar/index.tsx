@@ -6,7 +6,7 @@ import Link from "next/link"
 import { AnimatePresence, motion } from "framer-motion"
 
 import { Button } from "../../Button"
-import Logo from "../../logo"
+import Logo from "../Logo"
 
 const DropdownItem = ({ item }: any) => {
   const [isHovering, setIsHovering] = useState(false)

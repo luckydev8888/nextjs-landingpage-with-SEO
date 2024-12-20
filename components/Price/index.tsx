@@ -8,8 +8,8 @@ import { TbBrowserOff } from "react-icons/tb"
 import { priceCardData } from "@/config/constants"
 import { fadeInAnimationByIndex } from "@/lib/animations"
 
-import Container from "../container"
-import Switch from "../switch"
+import Container from "../Container"
+import Switch from "../Switch"
 import PriceCard from "./price-card"
 
 const PriceSection = () => {

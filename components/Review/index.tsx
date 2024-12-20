@@ -8,7 +8,7 @@ import "swiper/css"
 import "swiper/css/autoplay"
 import { reviewCardData, reviewPanelDatas } from "@/config/constants"
 
-import Container from "../container"
+import Container from "../Container"
 
 const ReviewSection = () => {
   const swiperRef = useRef<SwiperCore | null>(null)

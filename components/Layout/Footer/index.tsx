@@ -3,9 +3,9 @@ import { TbBrandTelegram } from "react-icons/tb"
 
 import { footerContent } from "@/lib/content"
 
-import Container from "../../container"
-import FooterSection from "../../footer-list"
-import Logo from "../../logo"
+import Container from "../../Container"
+import Logo from "../Logo"
+import FooterSection from "./footer-list"
 
 const Footer = () => {
   return (
