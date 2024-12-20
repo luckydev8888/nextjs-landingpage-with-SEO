@@ -1,43 +1,107 @@
-import { footerContent } from "@/lib/content";
-import Container from "../../container";
-import FooterSection from "../../footer-list";
-import Logo from "../../logo";
+import Link from "next/link"
+import { TbBrandTelegram } from "react-icons/tb"
 
+import { footerContent } from "@/lib/content"
+
+import Container from "../../Container"
+import Logo from "../Logo"
+import FooterSection from "./footer-list"
 
 const Footer = () => {
-    return (
-        <div className="flex items-center w-full">
-            <Container >
-                <footer className="w-full" >
-                    <div className="w-full mx-auto px-4 py-10">
-                        <div className="sm:flex sm:justify-between">
-                            <div className="mb-6 sm:mb-0">
-                                <Logo />
-                                <p className="mt-4 text-gray-600 text-sm w-[168px]">
-                                    Data visualization, and expense management for your business.
-                                </p>
-                            </div>
-                            <div className="grid grid-cols-2 gap-12 sm:grid-cols-4">
-                                {
-                                    footerContent.map((section, index) => (
-                                        <FooterSection key={index} title={section.title} urls={section.urls} />
-                                    ))
-                                }
-                            </div>
-                        </div>
-                        <div className="border-t border-gray-300 mt-10 pt-10 text-gray-600 text-sm flex flex-col sm:flex-row justify-between">
-                            <div>&copy; EA 2024</div>
-                            <div className="flex mt-4 sm:mt-0">
-                                <a href="/privacy-policy" className="mr-4 hover:underline">Privacy Policy</a>
-                                <a href="/terms" className="mr-4 hover:underline">Terms & Conditions</a>
-                                <a href="/cookie-policy" className="hover:underline">Cookie Policy</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </Container >
+  return (
+    <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-tl-[60px] rounded-tr-[60px]   text-white pt-16">
+      <div className={`container mx-auto px-7 sm:px-10 lg:px-10 relative  `}>
+        <div className="flex flex-col items-center gap-4 py-10 ">
+          <footer className="w-full">
+            <div className="w-full mx-auto px-4 py-10">
+              <div className="sm:flex sm:justify-between">
+                <div className="mb-6 sm:mb-0">
+                  <Logo textColor="white" />
+                  <p className="text-gray-400 mt-4">
+                    The ultimate deeplink technology for top Instagram
+                    conversion.
+                  </p>
+                  <button className="mt-6 bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-full flex items-center space-x-2">
+                    <TbBrandTelegram />
+                    <span>Telegram News</span>
+                  </button>
+                </div>
+                <div className="flex flex-col space-y-2">
+                  <h2 className="text-lg font-semibold">Explore</h2>
+                  <Link
+                    href="#welcome"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Welcome
+                  </Link>
+                  <Link
+                    href="#features"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Features
+                  </Link>
+                  <Link
+                    href="#reviews"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Reviews
+                  </Link>
+                  <Link
+                    href="#pricing"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Pricing
+                  </Link>
+                  <Link href="#faq" className="text-gray-400 hover:text-white">
+                    FAQ
+                  </Link>
+                </div>
+                <div className="flex flex-col space-y-2">
+                  <h2 className="text-lg font-semibold">Resources</h2>
+                  <Link
+                    href="/terms-and-conditions"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Terms & Conditions
+                  </Link>
+                  <Link
+                    href="/privacy-policy"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Privacy Policy
+                  </Link>
+                  <Link
+                    href="/guides"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Guides
+                  </Link>
+                  <Link
+                    href="/affiliate-program"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Affiliate Program
+                  </Link>
+                  <Link
+                    href="/telegram-support"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Telegram Support
+                  </Link>
+                </div>
+              </div>
+              <div className="mt-12 border-t border-gray-700 pt-6 flex flex-col lg:flex-row justify-between items-center">
+                <p className="text-gray-400 text-sm">
+                  © 2024{" "}
+                  <span className="font-semibold">GetAllMyLinks.com</span>
+                </p>
+              </div>
+            </div>
+          </footer>
         </div>
-    );
-};
+      </div>
+    </div>
+  )
+}
 
-export default Footer;
+export default Footer

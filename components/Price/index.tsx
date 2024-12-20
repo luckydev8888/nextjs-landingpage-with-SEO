@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { HiOutlinePaintBrush } from "react-icons/hi2"
 import { IoIosInformationCircleOutline } from "react-icons/io"
@@ -8,12 +8,12 @@ import { TbBrowserOff } from "react-icons/tb"
 import { priceCardData } from "@/config/constants"
 import { fadeInAnimationByIndex } from "@/lib/animations"
 
-import Container from "../container"
-import Switch from "../switch"
+import Container from "../Container"
+import Switch from "../Switch"
 import PriceCard from "./price-card"
 
 const PriceSection = () => {
-  const [isToggled, setToggled] = React.useState(false)
+  const [isToggled, setToggled] = useState(false)
 
   const SvgItem = (
     <svg
@@ -71,7 +71,7 @@ const PriceSection = () => {
               <h3 className="text-4xl mt-2 leading-[48px] font-bold text-center max-w-[700px] text-description">
                 Tailored pricing plans designed for you
               </h3>
-              <p className="text-4xl mt-2 text-center max-w-[1000px] text-[20px] text-description leading-[1.5]">
+              <p className="text-4xl mt-2 text-center max-w-[1000px] text-description leading-[1.5]">
                 All plans include advanced tools and features to boost your
                 conversion rate. Choose the best plan to fit your needs.
               </p>

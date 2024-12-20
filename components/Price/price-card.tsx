@@ -2,6 +2,8 @@ import React, { useEffect } from "react"
 import Image from "next/image"
 import { IoIosInformationCircleOutline } from "react-icons/io"
 
+import { priceCardData } from "@/config/constants"
+
 interface featureProps {
   img: any
   description: string
@@ -21,7 +23,7 @@ interface PriceCardProps {
   onClick?: () => void
 }
 
-export default function PriceCard({
+const PriceCard = ({
   logo,
   title,
   description,
@@ -30,7 +32,7 @@ export default function PriceCard({
   isYearly,
   features,
   onClick,
-}: PriceCardProps) {
+}: PriceCardProps) => {
   //   useEffect(() => {
   //     window.alert(imgs)
   //   }, [])
@@ -41,14 +43,14 @@ export default function PriceCard({
           <div className="flex items-center justify-center w-full">
             <img src={logo} alt="icon" className="w-88 h-97 mb-4 pb-2" />
           </div>
-          <h3 className="text-2xl font-semibold w-full text-center text-[22px] text-[#5d596c] mb-1">
+          <h3 className="text-2xl font-semibold w-full text-center text-[#5d596c] mb-1">
             {title}
           </h3>
           <div className="flex flex-row items-center justify-center gap-2 mt-10 w-full">
-            <p className="text-4xl font-semibold text-[#7367F0] text-[38px]">
+            <p className="text-4xl font-semibold text-[#7367F0]">
               {isYearly ? priceYearly : priceMonthly}
             </p>
-            <p className=" text-[#596780] text-lg text-[15px]">
+            <p className=" text-[#596780] text-lg">
               {isYearly ? "/year" : "/month"}
             </p>
           </div>
@@ -63,7 +65,7 @@ export default function PriceCard({
                 <div className="bg-[#eae8fd] text-[24px] rounded-full w-8 h-8 flex items-center justify-center">
                   {feature.img}
                 </div>
-                <div className="text-lg text-[#5d596c] text-[18px] font-medium leading-[1.37] ml-2">
+                <div className="text-lg text-[#5d596c] font-medium leading-[1.37] ml-2">
                   {feature.description}
                 </div>
                 {feature.isInformationCircleIncluded && (
@@ -85,3 +87,5 @@ export default function PriceCard({
     </div>
   )
 }
+
+export default PriceCard

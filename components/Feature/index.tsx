@@ -4,14 +4,14 @@ import { motion } from "framer-motion"
 import { fadeInAnimationByIndex } from "@/lib/animations"
 import { featureData } from "@/lib/content"
 
-import Container from "../container"
-import LeadingTitle from "../leading-title"
+import Container from "../Container"
+import LeadingTitle from "../Leading-title"
 import FeatureCard from "./feature-card"
 
 const FeatureSection = () => {
   return (
     <div
-      id="testimonial"
+      id="features"
       className="flex items-center w-full relative overflow-hidden"
     >
       <Container bgColor="#0D121F">
@@ -20,7 +20,7 @@ const FeatureSection = () => {
             <div className="flex flex-col items-center gap-3 w-full">
               <LeadingTitle label="All-in-One-Solution" />
               <h3 className="text-4xl leading-[48px] font-semibold text-center max-w-[700px] text-[#6f6b7d]">
-                to drive traffic away from Instagram's in-app browser
+                {`To drive traffic away from Instagram's in-app browser`}
               </h3>
               <motion.p
                 className="text-text-secondary-dark text-xl text-center mt-6 max-w-[500px]"
