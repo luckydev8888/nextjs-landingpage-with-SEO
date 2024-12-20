@@ -137,7 +137,7 @@ export const priceCardData = [
 export const reviewCardData = [
   {
     Name: "Pablo",
-    Position: "Founder of Edge Management",
+    Position: "Founder",
     description:
       "“GetAllMyLinks 2X my conversion rate on almost all my clients on insta! I can't recommend it enough it's the best tech out there!”",
     image: "/client1.png",
@@ -155,6 +155,13 @@ export const reviewCardData = [
     description:
       "“Finally an All In One tool! I have been using it for over a month, and no more Ads or accounts have been suspended! Finger crossed.”",
     image: "/client3.jpg",
+  },
+  {
+    Name: "Roy",
+    Position: "Talent Manager",
+    description:
+      "“Been using it for a month now on 3 different accounts, conversion is def better, i would say about 30% increase.”",
+    image: "/client2.jpg",
   },
 ]
 

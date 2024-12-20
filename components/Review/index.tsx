@@ -1,12 +1,20 @@
-import React from "react"
+import React, { useRef } from "react"
 import { motion } from "framer-motion"
+import SwiperCore from "swiper"
+import { Autoplay, Pagination } from "swiper/modules"
+import { Swiper, SwiperSlide } from "swiper/react"
 
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import "swiper/css/autoplay"
 import { reviewCardData } from "@/config/constants"
 
 import Container from "../container"
 import LeadingTitle from "../leading-title"
 
 const ReviewSection = () => {
+  const swiperRef = useRef<SwiperCore | null>(null)
   return (
     <div
       id="reviews"
@@ -33,31 +41,47 @@ const ReviewSection = () => {
             </div>
 
             {/* Cards Section */}
-            {reviewCardData.map((_, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center justify-between w-full lg:w-1/4 mb-3 rounded-lg"
+
+            <div className="lg:w-2/3 w-full">
+              <Swiper
+                modules={[Autoplay]}
+                pagination={{ clickable: false }}
+                autoplay={{ delay: 2000 }}
+                loop
+                slidesPerView={3} // Show three reviews at once
+                slidesPerGroup={1} // Slide one review at a time
+                spaceBetween={30} // Add space between slides
+                className="w-full max-w-5xl"
               >
-                <div className="w-full bg-gray-100 h-[384px] rounded-lg relative overflow-hidden flex items-center justify-center">
-                  <img
-                    className={`${
-                      _.image === "/card-image-3.svg"
-                        ? "object-center"
-                        : "w-full h-full"
-                    } object-cover`}
-                    src={`${_.image}`}
-                    style={{ objectPosition: "right top" }}
-                    alt={`Card Image ${index + 1}`}
-                  />
-                </div>
-                <div className="flex flex-col items-center justify-center mt-6 gap-3 h-full text-center">
-                  <h3 className="text-2xl font-semibold mt-3 text-dark">
-                    {_.title}
-                  </h3>
-                  <p className="text-text-secondary-light">{_.description}</p>
-                </div>
-              </div>
-            ))}
+                {reviewCardData.map((slide, index) => (
+                  <SwiperSlide key={index} className="h-[400px] flex">
+                    <div className="w-full flex flex-col items-center justify-between bg-white p-6 rounded-lg shadow-md text-center h-full">
+                      {/* Quote */}
+                      <p className="text-gray-700 italic mb-4 flex-1">
+                        “{slide.description}”
+                      </p>
+
+                      {/* User Info */}
+                      <div className="flex items-center space-x-3 mt-auto">
+                        <img
+                          src={slide.image}
+                          alt={slide.Name}
+                          className="w-10 h-10 rounded-full"
+                        />
+                        <div className="flex-0">
+                          <p className="text-gray-900 font-bold">
+                            {slide.Name}
+                          </p>
+                          <p className="text-gray-500 text-sm">
+                            {slide.Position}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
           </div>
         </motion.div>
       </Container>

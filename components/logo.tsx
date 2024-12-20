@@ -33,9 +33,7 @@ export default function Logo() {
         </defs>
       </svg>
 
-      <span className="inline-block text-xl font-bold text-black text-[32px]">
-        DEMO
-      </span>
+      <span className="inline-block text-xl font-bold text-black">DEMO</span>
     </Link>
   )
 }
