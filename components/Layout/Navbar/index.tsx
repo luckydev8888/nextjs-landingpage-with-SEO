@@ -85,14 +85,9 @@ const MainNav = () => {
           </nav>
           <div className="hidden lg:flex items-center space-x-4">
             <Button
-              variant="secondary"
               size="nav"
               label="Login/Register"
-              className={`${
-                isScrolled
-                  ? "bg-[#7367f0] text-white"
-                  : "text-white bg-[#7367f0]"
-              }`}
+              className="bg-[#7367F0] text-white hover:bg-[#5a52c9]" // Add hover effect if needed
             />
           </div>
           {isMenuOpen && (
