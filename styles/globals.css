@@ -11,3 +11,29 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
   scroll-behavior: smooth;
 }
+
+.aaaa-0 > div > svg {
+  color: indigo;
+}
+.aaaa-0 {
+  border-color: indigo;
+}
+
+.aaaa-1 > div > svg {
+  color: green;
+}
+.aaaa-1 {
+  border-color: green;
+}
+.aaaa-2 > div > svg {
+  color: cyan;
+}
+.aaaa-2 {
+  border-color: cyan;
+}
+.aaaa-3 > div > svg {
+  color: orange;
+}
+.aaaa-3 {
+  border-color: orange;
+}

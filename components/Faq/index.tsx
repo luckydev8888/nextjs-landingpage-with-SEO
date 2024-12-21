@@ -26,7 +26,7 @@ const FaqSection = () => {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left text-2xl font-semibold text-gray-500 flex justify-between items-center p-5"
+                className="w-full text-left text-base font-semibold text-gray-500 flex justify-between items-center p-5"
               >
                 {faq.question}
                 <span>{activeIndex === index ? "-" : "+"}</span>
@@ -36,7 +36,7 @@ const FaqSection = () => {
                   activeIndex === index ? "max-h-[300px]" : "max-h-0"
                 }`}
               >
-                <p className="mt-2 text-gray-600 text-xl p-5">{faq.answer}</p>
+                <p className="mt-2 text-gray-600 text-sm p-5">{faq.answer}</p>
               </div>
             </div>
           ))}

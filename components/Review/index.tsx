@@ -69,36 +69,33 @@ const ReviewSection = () => {
                 {reviewCardData.map((slide, index) => (
                   <SwiperSlide
                     key={index}
-                    className="review-slide flex items-stretch"
+                    className="flex items-stretch" // Ensure all slides stretch to fill height
                   >
-                    <div
-                      className="w-full flex flex-col items-center justify-between bg-white p-6 rounded-lg shadow-md text-center"
-                      style={{ height: `${maxHeight}px` }}
-                    >
+                    <div className="w-full flex flex-col items-center justify-between bg-white p-6 rounded-lg shadow-md text-center min-h-[300px]">
+                      {" "}
+                      {/* Adjust min-h */}
                       {/* Quote */}
-                      <p className="text-gray-700 italic text-base mb-4 flex-grow">
+                      <p className="text-gray-700 italic text-base mb-6 flex-grow">
                         {slide.description}
                       </p>
-
                       {/* User Info */}
-                      <div className="flex flex-col items-center mt-auto">
-                        {/* Image */}
+                      <div className="flex items-center space-x-3 mt-auto">
                         <img
                           src={slide.image}
                           alt={slide.Name}
-                          className="w-16 h-16 rounded-full mb-2"
+                          className="w-10 h-10 rounded-full"
                         />
-
-                        {/* Name */}
-                        <p className="text-gray-900 font-bold text-lg">
-                          {slide.Name}
-                        </p>
-
-                        {/* Position */}
-                        <p className="text-gray-500 text-sm">
-                          {slide.Position}
-                        </p>
+                        <div>
+                          <p className="text-gray-900 font-bold">
+                            {slide.Name}
+                          </p>
+                          <p className="text-gray-500 text-sm">
+                            {slide.Position}
+                          </p>
+                        </div>
                       </div>
+                      {/* Add consistent spacing at the bottom */}
+                      <div className="mt-4" />
                     </div>
                   </SwiperSlide>
                 ))}
@@ -115,22 +112,22 @@ const ReviewSection = () => {
             {reviewPanelDatas.map((reviewPanelData, index) => (
               <div
                 key={index}
-                className={`flex flex-col items-center justify-center border-2 rounded-lg p-8 ${reviewPanelData.borderColor}`}
+                className={`flex flex-col items-center justify-between border-2 rounded-lg p-8 h-full ${reviewPanelData.borderColor}  aaaa-${index}`}
               >
                 {/* Icon */}
                 <div
-                  className={`text-6xl mb-6 ${reviewPanelData.iconColor}`} // Icon size and color
+                  className={`text-6xl flex items-center justify-center h-16 w-16 mb-4 ${reviewPanelData.iconColor}`}
                 >
                   {reviewPanelData.icon}
                 </div>
 
                 {/* Value */}
-                <h3 className="text-3xl font-bold text-gray-500">
+                <h3 className="text-3xl font-bold text-gray-500 text-center mb-4 min-h-[3rem] flex items-center justify-center">
                   {reviewPanelData.value}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-500 text-center">
+                <p className="text-gray-500 text-center min-h-[4rem] flex items-center justify-center">
                   {reviewPanelData.description}
                 </p>
               </div>

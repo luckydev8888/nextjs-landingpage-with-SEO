@@ -5,7 +5,7 @@ import { fadeInAnimationByIndex } from "@/lib/animations"
 import { featureData } from "@/lib/content"
 
 import Container from "../Container"
-import LeadingTitle from "../Leading-title"
+import LeadingTitle from "../LeadingTitle"
 import FeatureCard from "./feature-card"
 
 const FeatureSection = () => {

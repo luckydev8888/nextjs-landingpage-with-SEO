@@ -64,75 +64,73 @@ const PriceSection = () => {
       id="pricing"
       className="flex items-center w-full relative overflow-hidden transaction-all"
     >
-      <Container>
-        <div className="w-full flex flex-col items-center gap-4 text-white">
-          <div className="flex flex-col items-center gap-20 w-full justify-start">
-            <div className="flex flex-col items-center gap-4 w-full">
-              <h3 className="text-2xl mt-2 leading-[48px] font-bold text-center max-w-[700px] text-description">
-                Tailored pricing plans designed for you
-              </h3>
-              <p className="text-xl mt-2 text-center max-w-[1000px] text-description leading-[1.5]">
-                All plans include advanced tools and features to boost your
-                conversion rate. Choose the best plan to fit your needs.
+      <div className="w-full flex flex-col items-center gap-4 text-white">
+        <div className="flex flex-col items-center gap-20 w-full justify-start">
+          <div className="flex flex-col items-center gap-4 w-full">
+            <h3 className="text-2xl mt-2 leading-[48px] font-bold text-center max-w-[700px] text-description">
+              Tailored pricing plans designed for you
+            </h3>
+            <p className="text-xl mt-2 text-center max-w-[1000px] text-description leading-[1.5]">
+              All plans include advanced tools and features to boost your
+              conversion rate. Choose the best plan to fit your needs.
+            </p>
+            <motion.p
+              className="text-secondary-light text-xl text-center mt-3 max-w-[500px]"
+              variants={fadeInAnimationByIndex}
+              initial="initial"
+              animate="animate"
+            >
+              Choose a plan that suits your business needs
+            </motion.p>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-4 relative ">
+            <div className="flex flex-row items-center gap-4 w-full">
+              <p className="text-description text-xl font-semibold text-center max-w-[500px]">
+                {" "}
+                Pay Monthly
               </p>
-              <motion.p
-                className="text-secondary-light text-xl text-center mt-3 max-w-[500px]"
-                variants={fadeInAnimationByIndex}
-                initial="initial"
-                animate="animate"
-              >
-                Choose a plan that suits your business needs
-              </motion.p>
+              <Switch
+                isToggled={isToggled}
+                setToggled={() => setToggled(!isToggled)}
+              />
+              <p className="text-description text-xl font-semibold text-center max-w-[500px]">
+                {" "}
+                Pay Yearly
+              </p>
+              <div className="absolute right-[-20px] top-10">{SvgItem}</div>
             </div>
-            <div className="flex flex-col items-center justify-center gap-4 relative ">
-              <div className="flex flex-row items-center gap-4 w-full">
-                <p className="text-description text-xl font-semibold text-center max-w-[500px]">
-                  {" "}
-                  Pay Monthly
-                </p>
-                <Switch
-                  isToggled={isToggled}
-                  setToggled={() => setToggled(!isToggled)}
-                />
-                <p className="text-description text-xl font-semibold text-center max-w-[500px]">
-                  {" "}
-                  Pay Yearly
-                </p>
-                <div className="absolute right-[-20px] top-10">{SvgItem}</div>
-              </div>
-              <div className="flex whitespace-nowrap flex-row mt-6 text-black py-1 px-3 font-semibold items-center gap-6 bg-background-light rounded-full">
-                Save 20%
-              </div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {priceCardData.map((priceCard, index: number) => (
-                <div
-                  key={index}
-                  className={`${
-                    index === 2
-                      ? "sm:col-span-2 lg:col-span-1" // Third card spans two columns on small screens
-                      : ""
-                  } flex flex-col items-center justify-center w-full p-6 bg-white rounded-lg`}
-                >
-                  <PriceCard
-                    logo={priceCard.logo}
-                    title={priceCard.title}
-                    description={priceCard.description}
-                    priceMonthly={priceCard.priceMonthly}
-                    priceYearly={priceCard.priceYearly}
-                    features={priceCard.features.map((feature) => ({
-                      ...feature,
-                      isInformationCircleIncluded:
-                        feature.isInformationCircleIncluded ?? false, // Default to false if undefined
-                    }))}
-                    isYearly={isToggled}
-                  />
-                </div>
-              ))}
+            <div className="flex whitespace-nowrap flex-row mt-6 text-black py-1 px-3 font-semibold items-center gap-6 bg-background-light rounded-full">
+              Save 20%
             </div>
           </div>
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {priceCardData.map((priceCard, index: number) => (
+              <div
+                key={index}
+                className={`${
+                  index === 2
+                    ? "md:col-span-2 md:w-1/2 md:mx-auto lg:col-span-1 lg:w-full" // Ensure the third card spans one column in all responsive states
+                    : ""
+                } flex flex-col items-center justify-center w-full p-6 bg-white rounded-lg`}
+              >
+                <PriceCard
+                  logo={priceCard.logo}
+                  title={priceCard.title}
+                  description={priceCard.description}
+                  priceMonthly={priceCard.priceMonthly}
+                  priceYearly={priceCard.priceYearly}
+                  features={priceCard.features.map((feature) => ({
+                    ...feature,
+                    isInformationCircleIncluded:
+                      feature.isInformationCircleIncluded ?? false, // Default to false if undefined
+                  }))}
+                  isYearly={isToggled}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </Container>
+      </div>
     </div>
   )
 }
