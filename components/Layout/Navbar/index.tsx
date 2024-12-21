@@ -84,11 +84,13 @@ const MainNav = () => {
             ))}
           </nav>
           <div className="hidden lg:flex items-center space-x-4">
-            <Button
-              size="nav"
-              label="Login/Register"
-              className="bg-[#7367F0] text-white hover:bg-[#5a52c9]" // Add hover effect if needed
-            />
+            <div className="hidden lg:flex items-center space-x-4">
+              <Link href="/Login">
+                <button className="flex flex-row gap-3 px-8 py-3 bg-[#7367F0] text-white rounded-lg hover:bg-[#5a52c9]">
+                  Login/Register
+                </button>
+              </Link>
+            </div>
           </div>
           {isMenuOpen && (
             <nav className="absolute top-full bg-white w-full h-screen shadow-md left-0 right-0 lg:hidden transition-all ease-in-out">
