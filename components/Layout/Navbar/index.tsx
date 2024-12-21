@@ -44,7 +44,7 @@ const MainNav = () => {
         className={`sticky top-0 z-40 w-[90%] mx-auto border-2 ${
           isScrolled
             ? "bg-white text-black shadow-md"
-            : "bg-[linear-gradient(138.18deg,#eae8fd,#fce5e6_94.44%)] text-white"
+            : "bg-[linear-gradient(138.18deg,#eae8fd,#fce5e6_94.44%)] text-[#5D596C]"
         } py-[0.75rem] mt-[1rem] mb-[1rem] transition-all ease-in-out rounded-[0.5rem]`}
       >
         <div className="container flex h-16 items-center justify-between p-3 mx-auto">
