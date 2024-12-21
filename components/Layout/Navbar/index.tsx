@@ -41,7 +41,7 @@ const MainNav = () => {
     <div className="sticky top-0 z-40">
       <header
         onClick={closeMenu}
-        className={`sticky top-0 z-40 w-[90%] mx-auto border-2 ${
+        className={`sticky top-0 z-40 w-[70%] mx-auto border-2 ${
           isScrolled
             ? "bg-white text-black shadow-md"
             : "bg-[linear-gradient(138.18deg,#eae8fd,#fce5e6_94.44%)] text-[#5D596C]"
