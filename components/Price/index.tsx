@@ -103,31 +103,33 @@ const PriceSection = () => {
               Save 20%
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {priceCardData.map((priceCard, index: number) => (
-              <div
-                key={index}
-                className={`${
-                  index === 2
-                    ? "md:col-span-2 md:w-1/2 md:mx-auto lg:col-span-1 lg:w-full" // Ensure the third card spans one column in all responsive states
-                    : ""
-                } flex flex-col items-center justify-center w-full p-6 bg-white rounded-lg`}
-              >
-                <PriceCard
-                  logo={priceCard.logo}
-                  title={priceCard.title}
-                  description={priceCard.description}
-                  priceMonthly={priceCard.priceMonthly}
-                  priceYearly={priceCard.priceYearly}
-                  features={priceCard.features.map((feature) => ({
-                    ...feature,
-                    isInformationCircleIncluded:
-                      feature.isInformationCircleIncluded ?? false, // Default to false if undefined
-                  }))}
-                  isYearly={isToggled}
-                />
-              </div>
-            ))}
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md-max:grid-cols-2 md-max:mx-5 md-max:border-l-rose-200 gap-6">
+              {priceCardData.map((priceCard, index: number) => (
+                <div
+                  key={index}
+                  className={`${
+                    index === 2
+                      ? "md:col-span-2 md:w-1/2 md:mx-auto lg:col-span-1 lg:w-full md-max:col-span-2 md-max:w-1/2 md-max:mx-auto"
+                      : ""
+                  } flex flex-col items-center justify-center w-full p-6 bg-white rounded-lg`}
+                >
+                  <PriceCard
+                    logo={priceCard.logo}
+                    title={priceCard.title}
+                    description={priceCard.description}
+                    priceMonthly={priceCard.priceMonthly}
+                    priceYearly={priceCard.priceYearly}
+                    features={priceCard.features.map((feature) => ({
+                      ...feature,
+                      isInformationCircleIncluded:
+                        feature.isInformationCircleIncluded ?? false,
+                    }))}
+                    isYearly={isToggled}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

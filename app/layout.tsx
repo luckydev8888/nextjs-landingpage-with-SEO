@@ -1,37 +1,35 @@
 import "@/styles/globals.css"
+import type { Metadata } from "next"
+import { Plus_Jakarta_Sans } from "next/font/google"
+
 import { cn } from "@/lib/utils"
 import MainNav from "@/components/Layout/Navbar"
-import { Plus_Jakarta_Sans } from 'next/font/google'
-import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Spend.In",
-  description: "Spend.In is a platform that helps you track your business expenses and manage your finances.",
+  title: "Demo",
+  description:
+    "Spend.In is a platform that helps you track your business expenses and manage your finances.",
 }
 
 interface RootLayoutProps {
   children: React.ReactNode
 }
 
-const jakartaFont = Plus_Jakarta_Sans({ subsets: ['latin'] })
+const jakartaFont = Plus_Jakarta_Sans({ subsets: ["latin"] })
 
-
-export default function RootLayout({ children }: RootLayoutProps) {
+const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <>
-      <html
-        lang="en" suppressHydrationWarning>
+      <html lang="en" suppressHydrationWarning>
         <head />
-        <body
-          className={cn(
-            "min-h-screen antialiased", jakartaFont.className)}
-        >
+        <body className={cn("min-h-screen antialiased", jakartaFont.className)}>
           <div className="relative flex min-h-screen min-w-full flex-col">
             <MainNav />
-            <div >{children}</div>
+            <div>{children}</div>
           </div>
         </body>
       </html>
     </>
   )
 }
+export default RootLayout

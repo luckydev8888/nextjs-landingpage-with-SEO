@@ -14,6 +14,9 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        "md-max": { max: "1320px" }, // Custom breakpoint for 1160px
+      },
       colors: {
         background: "#0d121f",
         "background-opacity": "#0d121f61",
