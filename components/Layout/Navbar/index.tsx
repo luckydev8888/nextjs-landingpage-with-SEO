@@ -45,9 +45,11 @@ const MainNav = () => {
           isScrolled
             ? "bg-white text-black shadow-md"
             : "bg-[linear-gradient(138.18deg,#eae8fd,#fce5e6_94.44%)] text-[#5D596C]"
-        } py-[0.75rem] mt-[1rem] mb-[1rem] transition-all ease-in-out rounded-[0.5rem]`}
+        } py-[0.25rem] mt-[0.5rem] mb-[0.5rem] transition-all ease-in-out rounded-[0.5rem]`} // Adjusted padding and margins
       >
-        <div className="container flex h-16 items-center justify-between p-3 mx-auto">
+        <div className="container flex h-12 items-center justify-between p-2 mx-auto">
+          {" "}
+          {/* Reduced height and padding */}
           <Logo textColor={isScrolled ? "black" : "white"} />
           <button
             className={`lg:hidden focus:outline-none ${
@@ -75,9 +77,9 @@ const MainNav = () => {
               <Link
                 href={item.href}
                 key={index}
-                className={`flex w-full items-center text-xl whitespace-nowrap p-2 ${
+                className={`flex w-full items-center text-base whitespace-nowrap p-1 ${
                   isScrolled ? "text-black" : "text-[#5D596C]"
-                } hover:text-[#7367f0] active:text-[#7367f0] rounded-md`}
+                } hover:text-[#7367f0] active:text-[#7367f0] rounded-md`} // Adjusted text size and padding
               >
                 {item.label}
               </Link>
@@ -86,7 +88,9 @@ const MainNav = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="hidden lg:flex items-center space-x-4">
               <Link href="/Login">
-                <button className="flex flex-row gap-3 px-8 py-3 bg-[#7367F0] text-white rounded-lg hover:bg-[#5a52c9]">
+                <button className="flex flex-row gap-3 px-4 py-2 bg-[#7367F0] text-white rounded-lg hover:bg-[#5a52c9] text-sm">
+                  {" "}
+                  {/* Adjusted button padding and font size */}
                   Login/Register
                 </button>
               </Link>
