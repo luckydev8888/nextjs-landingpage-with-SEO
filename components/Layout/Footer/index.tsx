@@ -5,7 +5,6 @@ import { footerContent } from "@/lib/content"
 
 import Container from "../../Container"
 import Logo from "../Logo"
-import FooterSection from "./footer-list"
 
 const Footer = () => {
   return (
@@ -18,8 +17,8 @@ const Footer = () => {
                 <div className="mb-6 sm:mb-0">
                   <Logo textColor="white" />
                   <p className="text-gray-400 mt-4">
-                    The ultimate deeplink technology for top Instagram
-                    conversion.
+                    Simplifying subreddit insights with dynamic updates and
+                    Telegram support.
                   </p>
                   <button className="mt-6 bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-full flex items-center space-x-2">
                     <TbBrandTelegram />

@@ -18,22 +18,22 @@ const FeatureSection = () => {
         <div className="w-full flex flex-col items-center gap-4 text-white">
           <div className="flex flex-col items-center gap-20 w-full justify-start">
             <div className="flex flex-col items-center gap-3 w-full">
-              <LeadingTitle label="All-in-One-Solution" />
-              <h3 className="text-4xl leading-[48px] font-semibold text-center max-w-[700px] text-[#6f6b7d]">
-                {`To drive traffic away from Instagram's in-app browser`}
+              <h3 className="text-3xl leading-[48px] mt-8 font-semibold text-center max-w-[700px] text-[#6f6b7d]">
+                {`About ReddKarma`}
               </h3>
               <motion.p
-                className="text-text-secondary-dark text-xl text-center mt-6 max-w-[500px]"
+                className="text-text-secondary-dark text-xl text-center max-w-[500px]"
                 variants={fadeInAnimationByIndex}
                 initial="initial"
                 animate="animate"
               >
-                Create your landing page or choose to instantly redirect your
-                fans to any website with our deeplink & shield protection
-                technology.
+                ReddKarma simplifies Reddit posting by providing instant access
+                to subreddit requirements. Gain valuable insights and save time
+                with our powerful features designed for Reddit enthusiasts and
+                marketers alike
               </motion.p>
             </div>
-            <div className="flex sm:flex-row sm:justify-center mt-8 flex-col flex-wrap items-center gap-8">
+            <div className="flex sm:flex-row sm:justify-center flex-col flex-wrap items-center gap-8">
               {featureData.map((testimonial, index) => (
                 <FeatureCard
                   key={index}

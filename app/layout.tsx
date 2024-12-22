@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils"
 import MainNav from "@/components/Layout/Navbar"
 
 export const metadata: Metadata = {
-  title: "Demo",
+  title: "Reddkarma",
   description:
     "Spend.In is a platform that helps you track your business expenses and manage your finances.",
 }
