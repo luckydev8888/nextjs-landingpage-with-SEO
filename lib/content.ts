@@ -8,38 +8,38 @@ export const featureData: Features[] = [
   {
     avatar: "/rocket.png",
     content:
-      "Direct Instagram users straight to your page on their native browser, like Safari.",
-    title: "Deeplink Technology",
+      "Discover the minimum requirements for account age, post karma, and comment karma for any subreddit.",
+    title: "Subreddit Insights",
   },
   {
     avatar: "/keyboard.png",
     content:
-      "Create a beautiful landing page with all your custom links and socials.",
-    title: "Landing Page",
+      "Receive real-time updates as subreddit requirements change dynamically.",
+    title: "Dynamic Updates",
   },
   {
     avatar: "/paper.png",
     content:
-      "Redirect users directly to any website without an intermediary page.",
-    title: "Direct Link",
+      "Save time by instantly accessing necessary subreddit information in one place.",
+    title: "Time Saver",
   },
   {
     avatar: "/laptop.png",
     content:
-      "Activate Shield Protection to protect your Instagram account against mods & bots.",
-    title: "Shield Protection",
+      "A user-friendly dashboard to access all subreddit requirements quickly and easily.",
+    title: "Control Panel Access",
   },
   {
     avatar: "/user.png",
     content:
-      "Redirect users directly to any website without an intermediary page.",
-    title: "Geo Filter",
+      "Retrieve subreddit requirements effortlessly using a Telegram command.",
+    title: "Telegram Bot Integration",
   },
   {
     avatar: "/check.png",
     content:
-      "Track activity & engagement in real-time (clicks, devices, demographics, IPs).",
-    title: "Analytics",
+      "Boost your Reddit engagement with tools that prepare you for hassle-free posting.",
+    title: "Seamless Posting",
   },
 ]
 

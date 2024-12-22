@@ -38,7 +38,7 @@ export default function Logo({ textColor }: LogoProps) {
       </svg>
 
       <span className={`inline-block text-xl font-bold text-${textColor}`}>
-        DEMO
+        REDDKARMA
       </span>
     </Link>
   )

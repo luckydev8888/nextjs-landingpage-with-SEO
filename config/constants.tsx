@@ -27,113 +27,131 @@ export const priceCardData = [
   {
     logo: paperAirplaneLogo,
     title: "Starter",
-    description:
-      "\u201CCreate a beautiful page, share all your content, and bypass Instagram limitations\u201D",
-    priceMonthly: "$0",
-    priceYearly: "$0",
+    description: "\u201CPerfect for individuals starting their journey.\u201D",
+    priceMonthly: "$5",
+    priceYearly: "$50",
     features: [
       {
         img: <TbBrowserOff />,
-        description: "Deeplink Technology",
+        description: "Basic Analytics",
         isInformationCircleIncluded: true,
       },
       {
         img: <PiBrowserDuotone />,
-        description: "Landing Page",
+        description: "5 Custom Links",
         isInformationCircleIncluded: true,
       },
       {
         img: <PiLinkSimpleLight />,
-        description: "Unlimited Content",
+        description: "Email Support",
         isInformationCircleIncluded: true,
       },
       {
         img: <HiOutlinePaintBrush />,
-        description: " Beautiful Designs",
+        description: "Daily Data Refresh",
         isInformationCircleIncluded: true,
       },
     ],
   },
   {
     logo: planeLogo,
-    title: "Creator",
+    title: "Pro",
     description:
       "\u201CSend fans directly to your page, analyze traffic, boost engagement, and customize content by location\u201D",
-    priceMonthly: "$9",
-    priceYearly: "$100",
+    priceMonthly: "$15",
+    priceYearly: "$150",
     features: [
       {
         img: <IoCheckmarkCircleOutline />,
-        description: "Everything in Starter",
+        description: "Advanced Analytics",
         isInformationCircleIncluded: true,
       },
       {
         img: <LuSend />,
-        description: "Direct Link",
+        description: "Unlimited Links",
         isInformationCircleIncluded: true,
       },
       {
         img: <TbWorldPin />,
-        description: "Geo Filter",
+        description: "Priority Support",
         isInformationCircleIncluded: true,
       },
       {
         img: <TiChartAreaOutline />,
-        description: "Link Analytics",
+        description: "10 Team Members",
         isInformationCircleIncluded: true,
       },
       {
         img: <TbClick />,
-        description: "Clicks Tracking",
+        description: "Customizable Reports",
         isInformationCircleIncluded: true,
       },
       {
         img: <IoRocketOutline />,
-        description: "Engagement Boost",
+        description: "24-Hour Data Refresh",
+        isInformationCircleIncluded: true,
+      },
+      {
+        img: <PiBrowserDuotone />,
+        description: "SEO Optimization Tools",
+        isInformationCircleIncluded: true,
+      },
+      {
+        img: <PiLinkSimpleLight />,
+        description: "Premium Security Features",
         isInformationCircleIncluded: true,
       },
     ],
   },
   {
     logo: shuttleRocketLogo,
-    title: "Ultimate",
-    description:
-      "For big business that need all features to manage their expenses.",
-    priceMonthly: "$33",
-    priceYearly: "$169.99",
+    title: "Premium",
+    description: "The ultimate solution for professionals.",
+    priceMonthly: "$30",
+    priceYearly: "$300",
     features: [
       {
         img: <IoCheckmarkCircleOutline />,
-        description: " Everything in Creator",
+        description: "All Pro Features",
       },
       {
         img: <PiLinkSimpleLight />,
-        description: "Up to 25 Links",
+        description: "Custom Integrations",
         isInformationCircleIncluded: true,
       },
       {
         img: <TbShieldPin />,
-        description: "Shield for 5 Links",
+        description: "24/7 VIP Support",
         isInformationCircleIncluded: true,
       },
       {
         img: <TbDashboard />,
-        description: "All-in-One Dashboard",
+        description: "Unlimited Users",
         isInformationCircleIncluded: true,
       },
       {
         img: <TbBrandGoogleAnalytics />,
-        description: "Custom Tracking",
+        description: "Dedicated Account Manager",
         isInformationCircleIncluded: true,
       },
       {
         img: <BsBadgeTm />,
-        description: "White-Label Experience",
+        description: "Real-Time Data Insights",
         isInformationCircleIncluded: true,
       },
       {
         img: <TbBrandTelegram />,
-        description: "VIP Telegram Support",
+        description: "Priority Bug Fixing",
+        isInformationCircleIncluded: true,
+      },
+      {
+        img: <PiBrowserDuotone />,
+        description: "White-Label Branding",
+        isInformationCircleIncluded: true,
+      },
+      {
+        img: <PiLinkSimpleLight />,
+        description: "API Access for Automation",
         isInformationCircleIncluded: true,
       },
     ],
@@ -144,59 +162,58 @@ export const reviewCardData = [
   {
     Name: "Pablo",
     Position: "Founder",
-    description:
-      "“GetAllMyLinks 2X my conversion rate on almost all my clients on insta! I can't recommend it enough it's the best tech out there!”",
+    description: "This tool has saved me hours of work. Highly recommended!",
     image: "/client1.png",
   },
   {
     Name: "Roy",
     Position: "Talent Manager",
     description:
-      "“Been using it for a month now on 3 different accounts, conversion is def better, i would say about 30% increase.”",
+      "ReddKarma made posting to subreddits much easier. A game-changer!",
     image: "/client2.jpg",
   },
   {
     Name: "Golden",
     Position: "Creator",
     description:
-      "“Finally an All In One tool! I have been using it for over a month, and no more Ads or accounts have been suspended!”",
+      "Thanks to ReddKarma, I now know the minimum requirements for any subreddit!",
     image: "/client3.jpg",
   },
   {
     Name: "Roy",
     Position: "Talent Manager",
     description:
-      "“Been using it for a month now on 3 different accounts, conversion is def better, i would say about 30% increase.”",
-    image: "/client2.jpg",
+      "ReddKarma is a fantastic tool! It makes posting on Reddit seamless and efficient.",
+    image: "/client4.png",
   },
 ]
 
 export const reviewPanelDatas = [
   {
     icon: <PiLaptop />, // Replace with an actual icon/image if necessary
-    value: "+50%",
-    description: "Conversion Rate Increase",
+    value: "5x",
+    description: "Faster subreddit insights",
     borderColor: "border-indigo-500", // Adjust colors as needed
     iconColor: "text-indigo-500", // Adjust colors as needed
   },
   {
     icon: <LuCircleUserRound />, // Replace with an actual icon/image
-    value: "25k+",
-    description: "Active Instagram Links",
+    value: "1M+",
+    description: "Users helped",
     borderColor: "border-green-500",
     iconColor: "text-green-500",
   },
   {
     icon: <GrDiamond />, // Replace with an actual icon/image
-    value: "4.8/5",
-    description: "Highly Trusted Product",
+    value: "99%",
+    description: "Customer satisfaction",
     borderColor: "border-cyan-500",
     iconColor: "text-cyan-500",
   },
   {
     icon: <PiSealCheckDuotone />, // Replace with an actual icon/image
-    value: "$0",
-    description: "14-Day Free Trial",
+    value: "24/7",
+    description: "Support availability",
     borderColor: "border-orange-500",
     iconColor: "text-orange-500",
   },
@@ -204,23 +221,29 @@ export const reviewPanelDatas = [
 
 export const faqData = [
   {
-    question: "What is your refund policy?",
+    question: "What is ReddKarma, and how does it work?",
     answer:
-      "We offer a full refund within the first 14 days of purchase if you're not satisfied with the product.",
+      "ReddKarma is a tool designed to retrieve minimum posting requirements (account age, post karma, and comment karma) for any subreddit on Reddit. Simply input a subreddit, and ReddKarma provides dynamic requirements via our control panel or Telegram bot.",
   },
   {
-    question: "How do I contact support?",
+    question: "Is ReddKarma free to use?",
     answer:
-      "You can contact support via email at support@example.com or through the contact form on our website.",
+      "We offer both free and premium plans. The free plan provides access to basic features, while the premium plan unlocks advanced tools like historical data, priority support, and API integrations.",
   },
   {
-    question: "Can I upgrade my plan later?",
-    answer: "Yes, you can upgrade your plan at any time from your dashboard.",
+    question: "How do I integrate ReddKarma with Telegram?",
+    answer:
+      "To integrate ReddKarma with Telegram, connect your account in the control panel. You’ll receive a bot token that allows you to query subreddit requirements directly through the Telegram bot.",
   },
   {
-    question: "Is there a free trial available?",
+    question: "Can I track multiple subreddits simultaneously?",
     answer:
-      "Yes, we offer a 14-day free trial. You can try all the features before making a purchase.",
+      "Yes! Our premium plan allows you to monitor multiple subreddits at once. Set up your preferences in the dashboard to receive alerts and updates in real-time.",
+  },
+  {
+    question: "What types of support are available?",
+    answer:
+      "We provide 24/7 email support for all users. Premium users also receive priority support and direct access to our support team via live chat or Telegram.",
   },
 ]
 
