@@ -9,8 +9,8 @@ export default function Logo({ textColor }: LogoProps) {
   return (
     <Link href="/" className="flex items-center space-x-2">
       <svg
-        width="32"
-        height="32"
+        width="40"
+        height="40"
         viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ export default function Logo({ textColor }: LogoProps) {
         </defs>
       </svg>
 
-      <span className={`inline-block text-xl font-bold text-${textColor}`}>
+      <span className={`inline-block text-3xl font-bold text-${textColor}`}>
         REDDKARMA
       </span>
     </Link>

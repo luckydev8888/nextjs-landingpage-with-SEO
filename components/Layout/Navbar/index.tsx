@@ -47,10 +47,9 @@ const MainNav = () => {
             : "bg-[linear-gradient(138.18deg,#eae8fd,#fce5e6_94.44%)] text-[#5D596C]"
         } py-[0.25rem] mt-[0.5rem] mb-[0.5rem] transition-all ease-in-out rounded-[0.5rem]`} // Adjusted padding and margins
       >
-        <div className="container flex h-12 items-center justify-between p-2 mx-auto">
-          {" "}
+        <div className="container flex h-14 items-center justify-between p-2 mx-auto">
           {/* Reduced height and padding */}
-          <Logo textColor={isScrolled ? "black" : "white"} />
+          <Logo textColor="black" />
           <button
             className={`lg:hidden focus:outline-none ${
               isScrolled ? "text-black" : "text-white"
