@@ -58,7 +58,7 @@ const Welcome = () => {
   return (
     <div
       id="welcome"
-      className="flex flex-col justify-center items-center text-center w-full bg-[linear-gradient(138.18deg,#fbdcdc,#f8b8b8_94.44%)] bg-cover bg-center h-auto py-20 px-8"
+      className="flex flex-col justify-center items-center text-center w-full bg-[linear-gradient(138.18deg,#fbdcdc,#f8b8b8_94.44%)] bg-cover h-auto py-20 px-8"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
