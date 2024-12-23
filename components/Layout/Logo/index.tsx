@@ -36,10 +36,6 @@ export default function Logo({ textColor }: LogoProps) {
           </clipPath>
         </defs>
       </svg>
-
-      <span className={`inline-block text-3xl font-bold text-${textColor}`}>
-        REDDKARMA
-      </span>
     </Link>
   )
 }

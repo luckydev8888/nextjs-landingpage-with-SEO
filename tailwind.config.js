@@ -17,6 +17,7 @@ module.exports = {
       screens: {
         ms: { min: "1320px" },
         mg: { min: "800px", max: "1320px" },
+        xs: "425px",
       },
       colors: {
         background: "#0d121f",
