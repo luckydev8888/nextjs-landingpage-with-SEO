@@ -8,7 +8,9 @@ const LoginPage = () => {
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
         {/* Logo */}
         <div className="flex justify-center mb-6">
-          <h1 className="text-2xl font-bold text-[#7367F0]">Demo</h1>
+          <span className="ml-2 text-3xl font-bold text-[#FF4500] hidden sm:block">
+            REDDKARMA
+          </span>
         </div>
 
         {/* Welcome Message */}
@@ -29,7 +31,7 @@ const LoginPage = () => {
               id="email"
               type="email"
               placeholder="Enter your email"
-              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring focus:ring-[#7367F0]"
+              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring focus:ring-[#FF4500]"
             />
           </div>
           <div className="mb-4">
@@ -44,7 +46,7 @@ const LoginPage = () => {
                 id="password"
                 type="password"
                 placeholder="Enter your password"
-                className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring focus:ring-[#7367F0]"
+                className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring focus:ring-[#FF4500]"
               />
               <button
                 type="button"
@@ -62,13 +64,13 @@ const LoginPage = () => {
               />
               <span className="ml-2 text-sm text-gray-600">Remember Me</span>
             </label>
-            <a href="#" className="text-sm text-[#7367F0] hover:underline">
+            <a href="#" className="text-sm text-[#FF4500] hover:underline">
               Forgot Password?
             </a>
           </div>
           <button
             type="submit"
-            className="w-full bg-[#7367F0] text-white py-2 rounded-md hover:bg-[#5a52c9] transition duration-300"
+            className="w-full bg-[#FF4500] text-white py-2 rounded-md hover:bg-red-300 transition duration-300"
           >
             Sign in
           </button>
@@ -77,7 +79,7 @@ const LoginPage = () => {
         {/* Create Account */}
         <p className="text-center text-gray-500 mt-6">
           New on our platform?{" "}
-          <a href="#" className="text-[#7367F0] hover:underline">
+          <a href="#" className="text-[#FF4500] hover:underline">
             Create an account
           </a>
         </p>

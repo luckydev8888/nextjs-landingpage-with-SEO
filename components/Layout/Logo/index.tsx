@@ -5,7 +5,7 @@ interface LogoProps {
   textColor: string // Define the type of the `textColor` prop
 }
 
-export default function Logo({ textColor }: LogoProps) {
+const Logo = ({ textColor }: LogoProps) => {
   return (
     <Link href="/" className="flex items-center space-x-2">
       <svg
@@ -39,3 +39,5 @@ export default function Logo({ textColor }: LogoProps) {
     </Link>
   )
 }
+
+export default Logo

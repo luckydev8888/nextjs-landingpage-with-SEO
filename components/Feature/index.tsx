@@ -6,7 +6,7 @@ import { featureData } from "@/lib/content"
 
 import Container from "../Container"
 import LeadingTitle from "../LeadingTitle"
-import FeatureCard from "./feature-card"
+import FeatureCard from "./FeatureCard"
 
 const FeatureSection = () => {
   return (

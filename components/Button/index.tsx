@@ -35,13 +35,7 @@ const buttonClasses = cva(
   }
 )
 
-export const Button = ({
-  label,
-  href,
-  variant,
-  size,
-  ...props
-}: ButtonProps) => {
+const Button = ({ label, href, variant, size, ...props }: ButtonProps) => {
   const classes = buttonClasses({ variant, size, className: props.className })
 
   if (href) {
@@ -58,3 +52,4 @@ export const Button = ({
     </button>
   )
 }
+export default Button

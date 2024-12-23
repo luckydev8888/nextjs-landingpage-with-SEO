@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react"
 import Link from "next/link"
 import { FiUser } from "react-icons/fi"
 
-import { Button } from "../../Button"
 import Logo from "../Logo"
 
 const navItems = [
