@@ -5,7 +5,7 @@ import FeatureSection from "@/components/Feature"
 import Footer from "@/components/Layout/Footer"
 import PriceSection from "@/components/Price"
 import ReviewSection from "@/components/Review"
-import Welcome from "@/components/a"
+import Welcome from "@/components/Welcome"
 
 const IndexPage = () => {
   return (
