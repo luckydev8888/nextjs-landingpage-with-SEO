@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react"
 import Link from "next/link"
+import { FiUser } from "react-icons/fi"
 
 import { Button } from "../../Button"
 import Logo from "../Logo"
@@ -41,15 +42,15 @@ const MainNav = () => {
     <div className="sticky top-0 z-40">
       <header
         onClick={closeMenu}
-        className={`sticky top-0 z-40 w-[70%] mx-auto border-2 ${
+        className={`sticky top-0 z-40 w-[72%] mx-auto border-2 ${
           isScrolled
-            ? "bg-white text-black shadow-md"
-            : "bg-[linear-gradient(138.18deg,#eae8fd,#fce5e6_94.44%)] text-[#5D596C]"
+            ? "bg-[linear-gradient(138.18deg,#fbdcdc,#f8b8b8_94.44%)] text-red-800 shadow-md"
+            : "bg-white text-[#5D596C]"
         } py-[0.25rem] mt-[0.5rem] mb-[0.5rem] transition-all ease-in-out rounded-[0.5rem]`} // Adjusted padding and margins
       >
         <div className="container flex h-14 items-center justify-between p-2 mx-auto">
           {/* Reduced height and padding */}
-          <Logo textColor="black" />
+          <Logo textColor={isScrolled ? "[#F00]" : "black"} />
           <button
             className={`lg:hidden focus:outline-none ${
               isScrolled ? "text-black" : "text-white"
@@ -87,17 +88,20 @@ const MainNav = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="hidden lg:flex items-center space-x-4">
               <Link href="/Login">
-                <button className="flex flex-row gap-3 px-4 py-2 bg-[#7367F0] text-white rounded-lg hover:bg-[#5a52c9] text-sm">
-                  {" "}
-                  {/* Adjusted button padding and font size */}
-                  Login/Register
+                <button className="flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-300 text-sm">
+                  <div className="flex items-center justify-center h-5 w-5 bg-transparent">
+                    <FiUser className="h-full w-full" />
+                  </div>
+                  <span className="flex items-center h-5 leading-none">
+                    Login/Register
+                  </span>
                 </button>
               </Link>
             </div>
           </div>
           {isMenuOpen && (
-            <nav className="absolute top-full bg-white w-full h-screen shadow-md left-0 right-0 lg:hidden transition-all ease-in-out">
-              <div className="w-full flex flex-col items-start px-5 py-3 bg-white">
+            <nav className="absolute top-full bg-white w-full h-full shadow-md left-0 right-0 lg:hidden transition-all ease-in-out">
+              <div className="w-full flex flex-col items-start px-5 py-3  bg-[linear-gradient(138.18deg,#fbdcdc,#f8b8b8_94.44%)]">
                 {navItems?.map((item, index) => (
                   <Link
                     href={item.href}
@@ -108,7 +112,13 @@ const MainNav = () => {
                   </Link>
                 ))}
                 <div className="flex w-full flex-col items-center justify-center gap-4 mt-4">
-                  <Button variant="primary" size="nav" label="Login/Register" />
+                  <Button
+                    className="bg-red-600 hover:bg-red-300 active:text-[#7367f0]"
+                    text-red-600
+                    variant="primary"
+                    size="nav"
+                    label="Login/Register"
+                  />
                 </div>
               </div>
             </nav>

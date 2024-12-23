@@ -67,7 +67,7 @@ const PriceSection = () => {
       <div className="w-full flex flex-col items-center gap-4 text-white">
         <div className="flex flex-col items-center gap-20 w-full justify-start">
           <div className="flex flex-col items-center gap-4 w-full">
-            <h3 className="text-2xl mt-20 leading-[48px] font-bold text-center max-w-[700px] text-description">
+            <h3 className="text-2xl mt-20 leading-[48px] font-bold text-center max-w-[700px] text-red-600">
               Tailored pricing plans designed for you
             </h3>
             <p className="text-xl mt-2 text-center max-w-[1000px] text-description leading-[1.5]">
@@ -85,7 +85,7 @@ const PriceSection = () => {
           </div>
           <div className="flex flex-col items-center justify-center gap-4 relative ">
             <div className="flex flex-row items-center gap-4 w-full">
-              <p className="text-description text-xl font-semibold text-center max-w-[500px]">
+              <p className="text-red-600 text-xl font-semibold text-center max-w-[500px]">
                 {" "}
                 Pay Monthly
               </p>
@@ -93,7 +93,7 @@ const PriceSection = () => {
                 isToggled={isToggled}
                 setToggled={() => setToggled(!isToggled)}
               />
-              <p className="text-description text-xl font-semibold text-center max-w-[500px]">
+              <p className="text-red-600 text-xl font-semibold text-center max-w-[500px]">
                 {" "}
                 Pay Yearly
               </p>
@@ -104,14 +104,12 @@ const PriceSection = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md-max:grid-cols-2 md-max:mx-5 md-max:border-l-rose-200 gap-6">
+            <div className="grid grid-cols-1 gap-6 ms:grid-cols-3 mg:grid-cols-2">
               {priceCardData.map((priceCard, index: number) => (
                 <div
                   key={index}
                   className={`${
-                    index === 2
-                      ? "md:col-span-2 md:w-1/2 md:mx-auto lg:col-span-1 lg:w-full md-max:col-span-2 md-max:w-1/2 md-max:mx-auto"
-                      : ""
+                    index === 2 ? "mg:col-span-2 mg:w-1/2 mg:mx-auto" : ""
                   } flex flex-col items-center justify-center w-full p-6 bg-white rounded-lg`}
                 >
                   <PriceCard

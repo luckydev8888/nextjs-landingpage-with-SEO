@@ -33,7 +33,7 @@ const ReviewSection = () => {
   return (
     <div id="reviews" className="w-full">
       {/* Reviews Section */}
-      <div className="flex justify-center bg-[linear-gradient(138.18deg,#eae8fd,#fce5e6_94.44%)] py-16 px-4">
+      <div className="flex justify-center bg-[linear-gradient(138.18deg,#fbdcdc,#f8b8b8_94.44%)] py-16 px-4">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -43,7 +43,7 @@ const ReviewSection = () => {
             {/* Content Section */}
             <div className="flex flex-col items-center justify-center w-full lg:w-1/3 text-center">
               <h4 className="text-sm text-gray-600">Real Customers Reviews</h4>
-              <h3 className="text-3xl sm:text-4xl mt-3 leading-[48px] font-bold max-w-[300px] text-gray-600">
+              <h3 className="text-3xl sm:text-4xl mt-3 leading-[48px] font-bold max-w-[300px] text-red-600">
                 What people say
               </h3>
               <p className="text-gray-600 text-base sm:text-xl leading-8 mt-3 max-w-[500px]">

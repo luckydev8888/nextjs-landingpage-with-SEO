@@ -15,7 +15,8 @@ module.exports = {
     },
     extend: {
       screens: {
-        "md-max": { max: "1320px" }, // Custom breakpoint for 1160px
+        ms: { min: "1320px" },
+        mg: { min: "800px", max: "1320px" },
       },
       colors: {
         background: "#0d121f",
