@@ -5,12 +5,12 @@ import FeatureSection from "@/components/Feature"
 import Footer from "@/components/Layout/Footer"
 import PriceSection from "@/components/Price"
 import ReviewSection from "@/components/Review"
-import Welcome from "@/components/Welcome"
+import WelcomeSection from "@/components/Welcome"
 
 const IndexPage = () => {
   return (
     <section className="flex w-full flex-col ">
-      <Welcome />
+      <WelcomeSection />
       <FeatureSection />
       <ReviewSection />
       <PriceSection />

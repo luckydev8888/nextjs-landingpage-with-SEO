@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { TbMovie } from "react-icons/tb"
 
-const Welcome = () => {
+const WelcomeSection = () => {
   const [transform, setTransform] = useState({ rotateX: 0, rotateY: 0 })
   const requestRef = useRef<number | null>(null)
 
@@ -91,4 +91,4 @@ const Welcome = () => {
   )
 }
 
-export default Welcome
+export default WelcomeSection
