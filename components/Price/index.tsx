@@ -10,7 +10,7 @@ import { fadeInAnimationByIndex } from "@/lib/animations"
 
 import Container from "../Container"
 import Switch from "../Switch"
-import PriceCard from "./PriceCard"
+import PriceCard from "./priceCard"
 
 const PriceSection = () => {
   const [isToggled, setToggled] = useState(false)
