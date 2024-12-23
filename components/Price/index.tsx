@@ -67,7 +67,7 @@ const PriceSection = () => {
       <div className="w-full flex flex-col items-center gap-4 text-white">
         <div className="flex flex-col items-center gap-20 w-full justify-start">
           <div className="flex flex-col items-center gap-4 w-full">
-            <h3 className="text-2xl mt-20 leading-[48px] font-bold text-center max-w-[700px] text-red-600">
+            <h3 className="text-2xl mt-20 leading-[48px] font-bold text-center max-w-[700px] text-[#FF4500]">
               Tailored pricing plans designed for you
             </h3>
             <p className="text-xl mt-2 text-center max-w-[1000px] text-description leading-[1.5]">
@@ -85,7 +85,7 @@ const PriceSection = () => {
           </div>
           <div className="flex flex-col items-center justify-center gap-4 relative ">
             <div className="flex flex-row items-center gap-4 w-full">
-              <p className="text-red-600 text-xl font-semibold text-center max-w-[500px]">
+              <p className="text-[#FF4500] text-xl font-semibold text-center max-w-[500px]">
                 {" "}
                 Pay Monthly
               </p>
@@ -93,7 +93,7 @@ const PriceSection = () => {
                 isToggled={isToggled}
                 setToggled={() => setToggled(!isToggled)}
               />
-              <p className="text-red-600 text-xl font-semibold text-center max-w-[500px]">
+              <p className="text-[#FF4500] text-xl font-semibold text-center max-w-[500px]">
                 {" "}
                 Pay Yearly
               </p>

@@ -12,7 +12,7 @@ const FaqSection = () => {
   return (
     <div id="faq" className="bg-gray-50 py-24">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-red-600 mb-6">
+        <h2 className="text-4xl font-bold text-center text-[#FF4500] mb-6">
           Frequently Asked Questions
         </h2>
         <p className="text-center mb-5 pb-3 text-gray-600 text-xl">
@@ -22,11 +22,11 @@ const FaqSection = () => {
           {faqData.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-[linear-gradient(138.18deg,#fbdcdc,#f8b8b8_94.44%)]"
+              className="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-gradient-to-br from-[#FF7A4D] via-[#FF9966] to-[#FFB383]"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left text-base font-semibold text-red-500 flex justify-between items-center p-5"
+                className="w-full text-left text-base font-semibold text-black flex justify-between items-center p-5"
               >
                 {faq.question}
                 <span>{activeIndex === index ? "-" : "+"}</span>

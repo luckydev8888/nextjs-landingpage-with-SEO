@@ -18,7 +18,7 @@ const FeatureSection = () => {
         <div className="w-full flex flex-col items-center gap-4 text-white">
           <div className="flex flex-col items-center gap-20 w-full justify-start">
             <div className="flex flex-col items-center gap-3 w-full">
-              <h3 className="text-3xl leading-[48px] mt-8 font-semibold text-center max-w-[700px] text-[#F00]">
+              <h3 className="text-3xl leading-[48px] mt-8 font-semibold text-center max-w-[700px] text-[#FF4500]">
                 {`About ReddKarma`}
               </h3>
               <motion.p

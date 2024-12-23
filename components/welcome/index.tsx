@@ -58,18 +58,18 @@ const Welcome = () => {
   return (
     <div
       id="welcome"
-      className="flex flex-col justify-center items-center text-center w-full bg-[linear-gradient(138.18deg,#fbdcdc,#f8b8b8_94.44%)] bg-cover h-auto py-20 px-8"
+      className="flex flex-col justify-center items-center text-center w-full bg-gradient-to-br from-[#FF7A4D] via-[#FF9966] to-[#FFB383] bg-cover bg-center h-auto py-20 px-8"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
       {/* Title Section */}
-      <h2 className="text-5xl font-bold text-red-600 mb-4">
+      <h2 className="text-5xl font-bold text-[#FF4500] mb-4">
         Get More Fans, <br /> Protect Your Reddit Posts
       </h2>
       <p className="text-gray-600 text-xl max-w-2xl">
         Quickly retrieve subreddit posting requirements <br /> and save time.
       </p>
-      <button className="flex flex-row gap-3 mt-6 px-8 py-3 bg-red-600 text-white rounded-lg hover:bg-red-300">
+      <button className="flex flex-row gap-3 mt-6 px-8 py-3 bg-[#FF4500] text-white rounded-lg hover:bg-red-300">
         <TbMovie className="text-2xl" />
         Watch Video
       </button>

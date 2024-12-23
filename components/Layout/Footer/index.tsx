@@ -27,7 +27,7 @@ const Footer = () => {
                     Simplifying subreddit insights with dynamic updates and
                     Telegram support.
                   </p>
-                  <button className="mt-6 bg-red-600 hover:bg-red-300 text-white py-2 px-4 rounded-full flex items-center space-x-2">
+                  <button className="mt-6 bg-[#FF4500] hover:bg-red-300 text-white py-2 px-4 rounded-full flex items-center space-x-2">
                     <TbBrandTelegram />
                     <span>Telegram News</span>
                   </button>
