@@ -15,12 +15,19 @@ const Footer = () => {
             <div className="w-full mx-auto px-4 py-10">
               <div className="sm:flex sm:justify-between">
                 <div className="mb-6 sm:mb-0">
-                  <Logo textColor="white" />
+                  <div className="flex flex-row">
+                    <Logo textColor="text-red-100" />
+                    <span
+                      className="ml-2 text-3xl font-bold text-white" // Hide text on small screens (less than 425px)
+                    >
+                      REDDKARMA
+                    </span>
+                  </div>
                   <p className="text-gray-400 mt-4">
                     Simplifying subreddit insights with dynamic updates and
                     Telegram support.
                   </p>
-                  <button className="mt-6 bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-full flex items-center space-x-2">
+                  <button className="mt-6 bg-red-600 hover:bg-red-300 text-white py-2 px-4 rounded-full flex items-center space-x-2">
                     <TbBrandTelegram />
                     <span>Telegram News</span>
                   </button>
@@ -91,8 +98,7 @@ const Footer = () => {
               </div>
               <div className="mt-12 border-t border-gray-700 pt-6 flex flex-col lg:flex-row justify-between items-center">
                 <p className="text-gray-400 text-sm">
-                  © 2024{" "}
-                  <span className="font-semibold">GetAllMyLinks.com</span>
+                  © 2024 <span className="font-semibold">reddkarma.com</span>
                 </p>
               </div>
             </div>
