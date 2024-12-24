@@ -99,7 +99,7 @@ const PriceSection = () => {
               </p>
               <div className="absolute right-[-20px] top-10">{SvgItem}</div>
             </div>
-            <div className="flex whitespace-nowrap flex-row mt-6 text-black py-1 px-3 font-semibold items-center gap-6 bg-background-light rounded-full">
+            <div className="flex whitespace-nowrap flex-row mt-6 text-black py-1 px-3 font-semibold items-center gap-6 bg-gradient-to-br from-[#FF4500] via-[#FF6347] to-[#FFB383] rounded-full">
               Save 20%
             </div>
           </div>

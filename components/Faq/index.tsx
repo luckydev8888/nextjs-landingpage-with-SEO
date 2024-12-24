@@ -22,7 +22,7 @@ const FaqSection = () => {
           {faqData.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-gradient-to-br from-[#FF7A4D] via-[#FF9966] to-[#FFB383]"
+              className="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-gradient-to-br from-[#FF4500] via-[#FF6347] to-[#FFB383]"
             >
               <button
                 onClick={() => toggleFAQ(index)}
@@ -36,7 +36,7 @@ const FaqSection = () => {
                   activeIndex === index ? "max-h-[300px]" : "max-h-0"
                 }`}
               >
-                <p className="mt-2 text-gray-600 text-sm p-5">{faq.answer}</p>
+                <p className="mt-2 text-black text-sm p-5">{faq.answer}</p>
               </div>
             </div>
           ))}

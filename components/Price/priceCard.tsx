@@ -37,22 +37,20 @@ const PriceCard = ({
   //     window.alert(imgs)
   //   }, [])
   return (
-    <div className="flex flex-col flex-grow w-full sm:w-[384px] bg-gradient-to-br from-[#FF7A4D] via-[#FF9966] to-[#FFB383] p-8 rounded-lg text-black">
+    <div className="flex flex-col flex-grow w-full sm:w-[384px] bg-gradient-to-br from-[#FF4500] via-[#FF6347] to-[#FFB383] p-8 rounded-lg text-black">
       <div className="flex-1">
         <div className="flex items-start flex-col h-[280px]">
           <div className="flex items-center justify-center w-full">
             <img src={logo} alt="icon" className="w-88 h-97 mb-4 pb-2" />
           </div>
-          <h3 className="text-2xl font-semibold w-full text-center text-[#FF4500] mb-1">
+          <h3 className="text-2xl font-semibold w-full text-center text-white mb-1">
             {title}
           </h3>
           <div className="flex flex-row items-center justify-center gap-2 mt-10 w-full">
-            <p className="text-4xl font-semibold text-[#FF4500]">
+            <p className="text-4xl font-semibold text-black">
               {isYearly ? priceYearly : priceMonthly}
             </p>
-            <p className=" text-red-800 text-lg">
-              {isYearly ? "/year" : "/mon"}
-            </p>
+            <p className=" text-black text-lg">{isYearly ? "/year" : "/mon"}</p>
           </div>
         </div>
         <p className="mt-6 text-[##FF4500] italic text-[15px] font-medium leading-[1.37]">
@@ -62,7 +60,7 @@ const PriceCard = ({
           <ul className="gap-y-4 flex-col flex">
             {features?.map((feature, index) => (
               <div key={index} className="flex items-center">
-                <div className="bg-red-300 text-[24px] rounded-full w-8 h-8 flex items-center justify-center">
+                <div className="bg-white text-[24px] rounded-full w-8 h-8 flex items-center justify-center">
                   {feature.img}
                 </div>
                 <div className="text-lg text-black font-medium leading-[1.37] ml-2">

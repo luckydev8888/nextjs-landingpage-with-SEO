@@ -38,17 +38,21 @@ const MainNav = () => {
       <header
         className={`sticky top-0 z-40 w-[73%] max-w-[1400px] mx-auto border-2 ${
           isScrolled
-            ? "bg-gradient-to-br from-[#FF7A4D] via-[#FF9966] to-[#FFB383] text-[#FF4500] shadow-md"
+            ? "bg-gradient-to-br from-[#FF4500] via-[#FF6347] to-[#FFB383] text-[#FF4500] shadow-md"
             : "bg-white text-black"
         } py-[0.25rem] mt-[0.5rem] mb-[0.5rem] transition-all ease-in-out rounded-[0.5rem]`}
       >
         <div className="container flex h-14 items-center justify-between p-2 mx-auto">
           {/* Logo */}
           <div className="flex items-center">
-            <Logo textColor={isScrolled ? "#FF4500" : "black"} />
+            <Logo
+              textColor={isScrolled ? "#FFFFFF" : "#FF4500"}
+              isScrolled={isScrolled}
+            />
+
             <span
               className={`ml-2 text-3xl font-bold ${
-                isScrolled ? "text-[#FF4500]" : "text-black"
+                isScrolled ? "text-white" : "text-black"
               } hidden sm:block`}
             >
               REDDKARMA
