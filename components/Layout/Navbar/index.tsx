@@ -36,7 +36,7 @@ const MainNav = () => {
   return (
     <div className="sticky top-0 z-40">
       <header
-        className={`sticky top-0 z-40 w-[73%] mx-auto border-2 ${
+        className={`sticky top-0 z-40 w-[73%] max-w-[1400px] mx-auto border-2 ${
           isScrolled
             ? "bg-gradient-to-br from-[#FF7A4D] via-[#FF9966] to-[#FFB383] text-[#FF4500] shadow-md"
             : "bg-white text-black"
