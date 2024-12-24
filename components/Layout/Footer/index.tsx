@@ -16,7 +16,7 @@ const Footer = () => {
               <div className="sm:flex sm:justify-between">
                 <div className="mb-6 sm:mb-0">
                   <div className="flex flex-row">
-                    <Logo textColor="text-red-100" />
+                    <Logo textColor="text-red-100" isScrolled={true} />
                     <span
                       className="ml-2 text-3xl font-bold text-white" // Hide text on small screens (less than 425px)
                     >
